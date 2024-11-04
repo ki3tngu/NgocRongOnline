@@ -35,7 +35,7 @@ Dưới đây là phiên bản miễn phí<br/>
 ```
 termux-setup-storage
 apt update 
-apt update -y
+apt upgrade -y
 pkg install git
 git clone https://github.com/ki3tngu/NgocRongOnline
 clear
