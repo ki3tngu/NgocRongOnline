@@ -1,5 +1,5 @@
-pkg install git python python-pip openjdk-17
-pip install mysql-connector-python requests gdown 
+pkg install git python python-pip openjdk-17 gdown
+pip install mysql-connector-python requests
 git clone https://github.com/ki3tngu/NgocRongOnline
 clear
 gdown https://drive.usercontent.google.com/download?id=1ZueFYv3k_z_cZT9IRjL7Ltm5pGuBlUVK
