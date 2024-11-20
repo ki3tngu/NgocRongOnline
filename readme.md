@@ -5,7 +5,7 @@
 `donate`<br/>
 :moneybag: ${{\color{red}{\textsf{ MOMO: 0853035354 - MB BANK: 0853035354 \}}}}\$ :moneybag:<br/>
 `tham gia`
-[Discord]([https://discord.gg/qMGpWPFU](https://discord.gg/SQEXRbaAeJ)<br/>
+[Discord](https://discord.gg/SQEXRbaAeJ)<br/>
 Dưới đây là phiên bản miễn phí<br/>
 <img style="height:40px;" src="https://img.shields.io/github/downloads/ki3tngu/NgocRongOnline/total?style=for-the-badge&label=L%C6%B0%E1%BB%A3t%20t%E1%BA%A3i&color=red"/>
 
