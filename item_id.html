@@ -1,0 +1,6736 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Vật Phẩm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #searchInput {
+            position: fixed;
+            top: 35px;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 0px;
+            z-index: 10;
+
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 5px;
+            /* Để tránh chồng lên ô tìm kiếm */
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+
+            position: fixed;
+            top: 0;
+            /* Để đảm bảo tiêu đề nằm dưới ô tìm kiếm */
+            background: #fff;
+            /* Để phần tiêu đề có nền trắng */
+            z-index: 10;
+            /* Đảm bảo tiêu đề nằm trên các hàng khác */
+        }
+
+        th:nth-child(1) {
+            left: 0;
+            width: 50%;
+            /* Chiều rộng cho cột tên */
+        }
+
+        th:nth-child(2) {
+            left: 40.25%;
+            width: 50%;
+            /* Chiều rộng cho cột mô tả */
+        }
+
+        th:nth-child(3) {
+            left: 84.28%;
+            width: 34%;
+            /* Chiều rộng cho cột ID vật phẩm */
+        }
+    </style>
+</head>
+
+<body>
+    <table id="itemTable" style="display:inline-block; margin-top:20px;">
+        <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+        <thead>
+            <tr>
+                <th>TÊN</th>
+                <th>MÔ TẢ</th>
+                <th>ID</th>
+            </tr>
+        </thead>
+        <div style="height: 50px;"></div>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Đô Đốc Hải Tinh Vân&quot;</td>
+            <td>Trái Đất</td>
+            <td>10910</td>
+        </tr>
+        <tr>
+            <td>...</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9979</td>
+        </tr>
+        <tr>
+            <td>Alakazam</td>
+            <td>Pokemon</td>
+            <td>14023</td>
+        </tr>
+        <tr>
+            <td>Áo bạc Goku</td>
+            <td>Giúp giảm sát thương</td>
+            <td>1689</td>
+        </tr>
+        <tr>
+            <td>Áo bạc Zealot</td>
+            <td>Giúp giảm sát thương</td>
+            <td>1693</td>
+        </tr>
+        <tr>
+            <td>Áo choàng len</td>
+            <td>Giúp giảm sát thương</td>
+            <td>942</td>
+        </tr>
+        <tr>
+            <td>Áo choàng thun</td>
+            <td>Giúp giảm sát thương</td>
+            <td>942</td>
+        </tr>
+        <tr>
+            <td>Áo da Calic</td>
+            <td>Giúp giảm sát thương</td>
+            <td>1688</td>
+        </tr>
+        <tr>
+            <td>Áo da Pico</td>
+            <td>Giúp giảm sát thương</td>
+            <td>959</td>
+        </tr>
+        <tr>
+            <td>Áo đồng Tron</td>
+            <td>Giúp giảm sát thương</td>
+            <td>1692</td>
+        </tr>
+        <tr>
+            <td>Áo giáp bạc</td>
+            <td>Giúp giảm sát thương</td>
+            <td>934</td>
+        </tr>
+        <tr>
+            <td>Áo giáp đồng</td>
+            <td>Giúp giảm sát thương</td>
+            <td>391</td>
+        </tr>
+        <tr>
+            <td>Áo giáp sắt</td>
+            <td>Giúp giảm sát thương</td>
+            <td>391</td>
+        </tr>
+        <tr>
+            <td>Áo giáp vàng</td>
+            <td>Giúp giảm sát thương</td>
+            <td>934</td>
+        </tr>
+        <tr>
+            <td>Áo Hủy Diệt</td>
+            <td>Giúp giảm sát thương</td>
+            <td>6320</td>
+        </tr>
+        <tr>
+            <td>Áo Hủy Diệt</td>
+            <td>Giúp giảm sát thương</td>
+            <td>6315</td>
+        </tr>
+        <tr>
+            <td>Áo Hủy Diệt</td>
+            <td>Giúp giảm sát thương</td>
+            <td>6310</td>
+        </tr>
+        <tr>
+            <td>Áo jean Calic</td>
+            <td>Giúp giảm sát thương</td>
+            <td>1688</td>
+        </tr>
+        <tr>
+            <td>Áo Kaio</td>
+            <td>Giúp giảm sát thương</td>
+            <td>1691</td>
+        </tr>
+        <tr>
+            <td>Áo khoác Xayda</td>
+            <td>Giúp giảm sát thương</td>
+            <td>954</td>
+        </tr>
+        <tr>
+            <td>Áo len Pico</td>
+            <td>Giúp giảm sát thương</td>
+            <td>394</td>
+        </tr>
+        <tr>
+            <td>Áo lông đỏ</td>
+            <td>Giúp giảm sát thương</td>
+            <td>1690</td>
+        </tr>
+        <tr>
+            <td>Áo lông Xayda</td>
+            <td>Giúp giảm sát thương</td>
+            <td>954</td>
+        </tr>
+        <tr>
+            <td>Áo lưỡng long</td>
+            <td>Giúp giảm sát thương</td>
+            <td>1691</td>
+        </tr>
+        <tr>
+            <td>Áo sắt Tron</td>
+            <td>Giúp giảm sát thương</td>
+            <td>1692</td>
+        </tr>
+        <tr>
+            <td>Áo siêu xayda</td>
+            <td>Giúp giảm sát thương</td>
+            <td>1690</td>
+        </tr>
+        <tr>
+            <td>Áo sợi gai</td>
+            <td>Giúp giảm sát thương</td>
+            <td>393</td>
+        </tr>
+        <tr>
+            <td>Áo sợi len</td>
+            <td>Giúp giảm sát thương</td>
+            <td>393</td>
+        </tr>
+        <tr>
+            <td>Áo Thần Linh</td>
+            <td>Giúp giảm sát thương</td>
+            <td>4647</td>
+        </tr>
+        <tr>
+            <td>Áo Thần Namếc</td>
+            <td>Giúp giảm sát thương</td>
+            <td>4657</td>
+        </tr>
+        <tr>
+            <td>Áo Thần Xayda</td>
+            <td>Giúp giảm sát thương</td>
+            <td>4652</td>
+        </tr>
+        <tr>
+            <td>Áo Thiên Sứ</td>
+            <td>Giúp giảm sát thương</td>
+            <td>10185</td>
+        </tr>
+        <tr>
+            <td>Áo Thiên Sứ</td>
+            <td>Giúp giảm sát thương</td>
+            <td>10175</td>
+        </tr>
+        <tr>
+            <td>Áo Thiên Sứ</td>
+            <td>Giúp giảm sát thương</td>
+            <td>10165</td>
+        </tr>
+        <tr>
+            <td>Áo thun 3 lỗ</td>
+            <td>Giúp giảm sát thương</td>
+            <td>390</td>
+        </tr>
+        <tr>
+            <td>Áo thun dày</td>
+            <td>Giúp giảm sát thương</td>
+            <td>389</td>
+        </tr>
+        <tr>
+            <td>Áo thun Kame</td>
+            <td>Giúp giảm sát thương</td>
+            <td>938</td>
+        </tr>
+        <tr>
+            <td>Áo thun Pico</td>
+            <td>Giúp giảm sát thương</td>
+            <td>394</td>
+        </tr>
+        <tr>
+            <td>Áo thun thô</td>
+            <td>Giúp giảm sát thương</td>
+            <td>392</td>
+        </tr>
+        <tr>
+            <td>Áo vải ba lỗ</td>
+            <td>Giúp giảm sát thương</td>
+            <td>390</td>
+        </tr>
+        <tr>
+            <td>Áo vải dày</td>
+            <td>Giúp giảm sát thương</td>
+            <td>389</td>
+        </tr>
+        <tr>
+            <td>Áo vải Kame</td>
+            <td>Giúp giảm sát thương</td>
+            <td>938</td>
+        </tr>
+        <tr>
+            <td>Áo vải Pico</td>
+            <td>Giúp giảm sát thương</td>
+            <td>959</td>
+        </tr>
+        <tr>
+            <td>Áo vải thô</td>
+            <td>Giúp giảm sát thương</td>
+            <td>392</td>
+        </tr>
+        <tr>
+            <td>Áo vàng Goku</td>
+            <td>Giúp giảm sát thương</td>
+            <td>1689</td>
+        </tr>
+        <tr>
+            <td>Áo vàng Zealot</td>
+            <td>Giúp giảm sát thương</td>
+            <td>1693</td>
+        </tr>
+        <tr>
+            <td>Áo võ Goku</td>
+            <td>Giúp giảm sát thương</td>
+            <td>949</td>
+        </tr>
+        <tr>
+            <td>Áo võ Kame</td>
+            <td>Giúp giảm sát thương</td>
+            <td>949</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>91</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>8205</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>8203</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>8201</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>7847</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>7846</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>7843</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>271</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>268</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>266</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>263</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>261</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>259</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1389</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1388</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1387</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1386</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1385</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1384</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1383</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1382</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1381</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1380</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1379</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1378</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1377</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1354</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1352</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1350</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1348</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1346</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1344</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1342</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1334</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1330</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>121</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>5237</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>5235</td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>5233</td>
+        </tr>
+        <tr>
+            <td>Avatar đeo khẩu trang</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>7140</td>
+        </tr>
+        <tr>
+            <td>Avatar đeo khẩu trang</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>7137</td>
+        </tr>
+        <tr>
+            <td>Avatar đeo khẩu trang</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>7134</td>
+        </tr>
+        <tr>
+            <td>Avatar Gohan 1</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>7855</td>
+        </tr>
+        <tr>
+            <td>Avatar Gohan 2</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>7858</td>
+        </tr>
+        <tr>
+            <td>Avatar Thiên Sứ</td>
+            <td>Giúp giảm sát thương</td>
+            <td>9979</td>
+        </tr>
+        <tr>
+            <td>Avatar Thiên Sứ</td>
+            <td>Giúp giảm sát thương</td>
+            <td>10099</td>
+        </tr>
+        <tr>
+            <td>Avatar Thiên Sứ</td>
+            <td>Giúp giảm sát thương</td>
+            <td>10039</td>
+        </tr>
+        <tr>
+            <td>Avatar VIP</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1478</td>
+        </tr>
+        <tr>
+            <td>Avatar VIP</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1477</td>
+        </tr>
+        <tr>
+            <td>Avatar VIP</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>1454</td>
+        </tr>
+        <tr>
+            <td>Ayser Fox</td>
+            <td>Cải trang</td>
+            <td>2653</td>
+        </tr>
+        <tr>
+            <td>Azomatisse</td>
+            <td>Pokemon</td>
+            <td>14011</td>
+        </tr>
+        <tr>
+            <td>Ẩn danh</td>
+            <td>+10 phút (tối đa 30 phút) hạ địch không để lại tên trong danh sách kẻ thù và không cho phép người khác
+                dịch chuyển tức thời đến</td>
+            <td>2760</td>
+        </tr>
+        <tr>
+            <td>Ẩn Danh Đặc Biệt</td>
+            <td>Gần Như Không Tác Dụng Gì So Với Bản Thường</td>
+            <td>10717</td>
+        </tr>
+        <tr>
+            <td>Ba lô</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1038</td>
+        </tr>
+        <tr>
+            <td>Babicat</td>
+            <td>Thú cưng</td>
+            <td>15068</td>
+        </tr>
+        <tr>
+            <td>Baby Vegeta</td>
+            <td>Cải trang thành Baby Vegeta</td>
+            <td>12204</td>
+        </tr>
+        <tr>
+            <td>Bạch tuộc nướng</td>
+            <td>Tặng cho Whis hoặc ăn vào để tăng 5% sát thương khi chí mạng trong vòng 10 phút</td>
+            <td>8061</td>
+        </tr>
+        <tr>
+            <td>Bản đồ khí gas</td>
+            <td>Gặp Mr.Popo để vào Map Khí Gas</td>
+            <td>5428</td>
+        </tr>
+        <tr>
+            <td>Bánh chưng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7080</td>
+        </tr>
+        <tr>
+            <td>Bánh gato nhện</td>
+            <td>Vật phẩm sự kiện. Ăn vào +10% giáp trong vòng 30 phút.</td>
+            <td>8246</td>
+        </tr>
+        <tr>
+            <td>Bánh Pudding</td>
+            <td>Thu thập đủ 99 đến gặp Bill tại hành tinh Kaio</td>
+            <td>6324</td>
+        </tr>
+        <tr>
+            <td>Bánh tét</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7079</td>
+        </tr>
+        <tr>
+            <td>Bánh Trung Thu 1 trứng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4042</td>
+        </tr>
+        <tr>
+            <td>Bánh Trung Thu 2 trứng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4043</td>
+        </tr>
+        <tr>
+            <td>Bánh Trung Thu Đặc Biệt</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4125</td>
+        </tr>
+        <tr>
+            <td>Bánh trung thu Gà quay</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8132</td>
+        </tr>
+        <tr>
+            <td>Bánh trung thu thập cẩm</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8131</td>
+        </tr>
+        <tr>
+            <td>Bao Lì Xì</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6764</td>
+        </tr>
+        <tr>
+            <td>Bát Giới</td>
+            <td>Pet</td>
+            <td>4498</td>
+        </tr>
+        <tr>
+            <td>Bắt</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>1407</td>
+        </tr>
+        <tr>
+            <td>Bất phục</td>
+            <td>Bất phục</td>
+            <td>12140</td>
+        </tr>
+        <tr>
+            <td>Bí kiếp</td>
+            <td>Dùng để đổi Cải trang Yardrat</td>
+            <td>5207</td>
+        </tr>
+        <tr>
+            <td>Bí kiếp tuyệt kỹ</td>
+            <td>Gặp Whis tại hành tinh Kaio để học tuyệt kỹ</td>
+            <td>12144</td>
+        </tr>
+        <tr>
+            <td>Bí ngô</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>5138</td>
+        </tr>
+        <tr>
+            <td>Bí ngô 1 sao</td>
+            <td>Thu thập để ước Rồng Xương</td>
+            <td>6579</td>
+        </tr>
+        <tr>
+            <td>Bí ngô 2 sao</td>
+            <td>Thu thập để ước Rồng Xương</td>
+            <td>6580</td>
+        </tr>
+        <tr>
+            <td>Bí ngô 3 sao</td>
+            <td>Thu thập để ước Rồng Xương</td>
+            <td>6581</td>
+        </tr>
+        <tr>
+            <td>Bí ngô 4 sao</td>
+            <td>Thu thập để ước Rồng Xương</td>
+            <td>6582</td>
+        </tr>
+        <tr>
+            <td>Bí ngô 5 sao</td>
+            <td>Thu thập để ước Rồng Xương</td>
+            <td>6583</td>
+        </tr>
+        <tr>
+            <td>Bí ngô 6 sao</td>
+            <td>Thu thập để ước Rồng Xương</td>
+            <td>6584</td>
+        </tr>
+        <tr>
+            <td>Bí ngô 7 sao</td>
+            <td>Thu thập để ước Rồng Xương</td>
+            <td>6585</td>
+        </tr>
+        <tr>
+            <td>Bí ngô nhí nhảnh</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8192</td>
+        </tr>
+        <tr>
+            <td>Bình chứa Commeson</td>
+            <td>Vũ khí của người Potaufeu (Giảm 90% sát thương từ quái)</td>
+            <td>5829</td>
+        </tr>
+        <tr>
+            <td>Bình nước</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4029</td>
+        </tr>
+        <tr>
+            <td>Bình nước phép</td>
+            <td>Gặp bà Hạt Mít để sử dụng</td>
+            <td>1422</td>
+        </tr>
+        <tr>
+            <td>Black Goku</td>
+            <td>Cải trang thành black goku</td>
+            <td>5141</td>
+        </tr>
+        <tr>
+            <td>Blue flame</td>
+            <td>Thú cưỡi Basil</td>
+            <td>15928</td>
+        </tr>
+        <tr>
+            <td>Bó Hoa Hồng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8933</td>
+        </tr>
+        <tr>
+            <td>Bó Hoa Vàng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8934</td>
+        </tr>
+        <tr>
+            <td>Bọ Xít 7 màu</td>
+            <td>Pet sự kiện</td>
+            <td>12447</td>
+        </tr>
+        <tr>
+            <td>Bom hi sinh lv1</td>
+            <td>học kỹ năng bom hi sinh</td>
+            <td>2248</td>
+        </tr>
+        <tr>
+            <td>Bom hi sinh lv2</td>
+            <td>nâng bom hi sinh lên cấp 2</td>
+            <td>2248</td>
+        </tr>
+        <tr>
+            <td>Bom hi sinh lv3</td>
+            <td>nâng bom hi sinh lên cấp 3</td>
+            <td>2248</td>
+        </tr>
+        <tr>
+            <td>Bom hi sinh lv4</td>
+            <td>nâng bom hi sinh lên cấp 4</td>
+            <td>2248</td>
+        </tr>
+        <tr>
+            <td>Bom hi sinh lv5</td>
+            <td>nâng bom hi sinh lên cấp 5</td>
+            <td>2248</td>
+        </tr>
+        <tr>
+            <td>Bom hi sinh lv6</td>
+            <td>nâng bom hi sinh lên cấp 6</td>
+            <td>2248</td>
+        </tr>
+        <tr>
+            <td>Bom hi sinh lv7</td>
+            <td>nâng bom hi sinh lên cấp 7</td>
+            <td>2248</td>
+        </tr>
+        <tr>
+            <td>Bồ cào</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9706</td>
+        </tr>
+        <tr>
+            <td>Bổ huyết</td>
+            <td>Trong vòng tối đa 10 phút +100% HP</td>
+            <td>2755</td>
+        </tr>
+        <tr>
+            <td>Bổ Huyết Siêu Cấp</td>
+            <td>Trong vòng tối đa 10 phút +120% KI</td>
+            <td>10714</td>
+        </tr>
+        <tr>
+            <td>Bổ khí</td>
+            <td>Trong vòng tối đa 10 phút +100% KI</td>
+            <td>2756</td>
+        </tr>
+        <tr>
+            <td>Bổ Khí Siêu Cấp</td>
+            <td>Trong vòng tối đa 10 phút giảm 60% sát thương</td>
+            <td>10715</td>
+        </tr>
+        <tr>
+            <td>Bông bay</td>
+            <td>Thú cưng</td>
+            <td>15066</td>
+        </tr>
+        <tr>
+            <td>Bông hoa</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>5206</td>
+        </tr>
+        <tr>
+            <td>Bông hoa</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>5206</td>
+        </tr>
+        <tr>
+            <td>Bông hoa</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>5206</td>
+        </tr>
+        <tr>
+            <td>Bông hồng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>5206</td>
+        </tr>
+        <tr>
+            <td>Bông tai Porata</td>
+            <td>Sử dụng để hợp thể với đệ tử</td>
+            <td>3896</td>
+        </tr>
+        <tr>
+            <td>Bông tai Porata cấp 2</td>
+            <td>Sử dụng để hợp thể với đệ tử với ngoại hình VIP. Chỉ số đệ tử tăng cao hơn 10% khi hợp thể so với BTC1
+            </td>
+            <td>7993</td>
+        </tr>
+        <tr>
+            <td>Bông tai Porata cấp 3</td>
+            <td>Sử dụng Hợp thể Đệ tử được ngoại hình BTC3. Chỉ số hợp thể Tăng cao hơn 15% BTC2</td>
+            <td>13509</td>
+        </tr>
+        <tr>
+            <td>Bông tuyết</td>
+            <td>Tạo khí lạnh gây ảnh hưởng xung quanh</td>
+            <td>7066</td>
+        </tr>
+        <tr>
+            <td>Bột mì</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7069</td>
+        </tr>
+        <tr>
+            <td>Bùa Bất Tử</td>
+            <td> sẽ không bao giờ bị quái đánh chết. Thay vào đó chỉ còn 1 máu. Tuy nhiên phải bơm máu mới có thể đánh
+                lại. Có tác dụng trong 1 khoảng thời gian kể từ lúc mua.</td>
+            <td>1407</td>
+        </tr>
+        <tr>
+            <td>Bùa Da Trâu</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1405</td>
+        </tr>
+        <tr>
+            <td>Bùa Da Trâu</td>
+            <td>Tăng sức chịu đòn cho . Khi bị quái đánh máu sẽ mất ít hơn</td>
+            <td>1405</td>
+        </tr>
+        <tr>
+            <td>Bùa Dẻo Dai</td>
+            <td>Thể lực của sẽ không bao giờ giảm khi bùa này có tác dụng. Có tác dụng trong 1 khoảng thời gian</td>
+            <td>1408</td>
+        </tr>
+        <tr>
+            <td>Bùa Đệ Tử</td>
+            <td>Đệ tử sẽ tự đánh quái không cần sư phụ</td>
+            <td>1403</td>
+        </tr>
+        <tr>
+            <td>Bùa Mạnh Mẽ</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1404</td>
+        </tr>
+        <tr>
+            <td>Bùa Mạnh Mẽ</td>
+            <td>Cú đấm của sẽ mạnh hơn. Tăng 150% sức đánh hiện có khi đánh Quái trong 1 khoảng thời gian</td>
+            <td>1404</td>
+        </tr>
+        <tr>
+            <td>Búa Mjolnir</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9815</td>
+        </tr>
+        <tr>
+            <td>Bùa Oai Hùng</td>
+            <td> sẽ oai vệ hơn. Quái Thủ Lĩnh sẽ sợ và đánh yếu đi</td>
+            <td>9815</td>
+        </tr>
+        <tr>
+            <td>Búa Stormbreaker</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9814</td>
+        </tr>
+        <tr>
+            <td>Bùa Tẩy Pháp Sư</td>
+            <td>Bùa tẩy Pháp sư</td>
+            <td>16006</td>
+        </tr>
+        <tr>
+            <td>Bùa Thu Hút</td>
+            <td>Vật phẩm đánh văng ra nếu là của </td>
+            <td>1409</td>
+        </tr>
+        <tr>
+            <td>Bùa Trí Tuệ</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1403</td>
+        </tr>
+        <tr>
+            <td>Bùa Trí Tuệ</td>
+            <td>Tiềm năng và sức mạnh của sẽ nhận được gấp đôi trong 1 khoảng thời gian</td>
+            <td>1403</td>
+        </tr>
+        <tr>
+            <td>Bùa Trí Tuệ x3</td>
+            <td>Tiềm năng và sức mạnh của sẽ nhận được gấp ba trong 1 khoảng thời gian</td>
+            <td>1406</td>
+        </tr>
+        <tr>
+            <td>Bùa Trí Tuệ x4</td>
+            <td>Tiềm năng và sức mạnh của sẽ nhận được gấp bốn trong 1 khoảng thời gian</td>
+            <td>1407</td>
+        </tr>
+        <tr>
+            <td>Búp bê</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8472</td>
+        </tr>
+        <tr>
+            <td>Bươm Bướm Lòe Loẹt</td>
+            <td>Pet sự kiện</td>
+            <td>12448</td>
+        </tr>
+        <tr>
+            <td>Cá bảy màu</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9596</td>
+        </tr>
+        <tr>
+            <td>Cà chua</td>
+            <td></td>
+            <td>931</td>
+        </tr>
+        <tr>
+            <td>Cá diêu hồng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9597</td>
+        </tr>
+        <tr>
+            <td>Cá heo</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9608</td>
+        </tr>
+        <tr>
+            <td>Cá Ngựa</td>
+            <td>Linh Thú</td>
+            <td>15317</td>
+        </tr>
+        <tr>
+            <td>Cá nóc</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9595</td>
+        </tr>
+        <tr>
+            <td>Cà rốt</td>
+            <td></td>
+            <td>933</td>
+        </tr>
+        <tr>
+            <td>Cà rốt</td>
+            <td></td>
+            <td>4083</td>
+        </tr>
+        <tr>
+            <td>Cái nịt</td>
+            <td>Dùng để làm người chơi cay</td>
+            <td>415</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Chi Chi</td>
+            <td>6783</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Urôn</td>
+            <td>6734</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Sarahs Mother</td>
+            <td>6473</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Pan</td>
+            <td>6470</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Caulifla</td>
+            <td>6431</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Android 21</td>
+            <td>6400</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Sarah</td>
+            <td>6369</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Muscular Lady</td>
+            <td>6338</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Nàng Tiên Cá</td>
+            <td>6329</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Quy lão Kamê</td>
+            <td>5175</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Tôn Ngộ Không</td>
+            <td>4543</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Bát Giới (chỉ dành cho đệ tử)</td>
+            <td>4498</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Tôn Ngộ Không (chỉ dành cho đệ tử)</td>
+            <td>4468</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Tôn Ngộ Không</td>
+            <td>4466</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Tôn Ngộ Không</td>
+            <td>4464</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Bui Bui</td>
+            <td>4354</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Drabura</td>
+            <td>4165</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Yacôn</td>
+            <td>4135</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Người Vô Hình</td>
+            <td>3745</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Jacky Chun</td>
+            <td>3527</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Đracula</td>
+            <td>3496</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Đracula (Sự kiện Halloween)</td>
+            <td>3496</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Bông Băng</td>
+            <td>3469</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Bông Băng (Sự kiện Halloween)</td>
+            <td>3469</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Thỏ Đầu Bạc</td>
+            <td>3438</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Vua Quỷ Satan</td>
+            <td>3407</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Vua Quỷ Satan (Sự kiện Halloween)</td>
+            <td>3407</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Bujin</td>
+            <td>3390</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Bido</td>
+            <td>3310</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Zangya</td>
+            <td>3276</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Kogu</td>
+            <td>3245</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Super Bojack</td>
+            <td>3215</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Bojack</td>
+            <td>3183</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Sơn Tinh</td>
+            <td>3099</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Thủy Tinh</td>
+            <td>3069</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Chi Chi</td>
+            <td>3047</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Bum ma</td>
+            <td>3045</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Lý Tiểu Nương</td>
+            <td>3014</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Mabư mập</td>
+            <td>2957</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Xên Bọ Hung con</td>
+            <td>2715</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Android 15</td>
+            <td>2684</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Android 20</td>
+            <td>2622</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Android 13</td>
+            <td>2592</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Android 19</td>
+            <td>2560</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Android 14</td>
+            <td>2529</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Xên Bọ Hung 3</td>
+            <td>2407</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Xên Bọ Hung 2</td>
+            <td>2376</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Xên Bọ Hung 1</td>
+            <td>2345</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Kuku</td>
+            <td>2137</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Pôpô</td>
+            <td>2133</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Ninja Áo Tím</td>
+            <td>2131</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Thượng Đế</td>
+            <td>2129</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Yarirobe</td>
+            <td>2128</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Thần Vũ Trụ</td>
+            <td>2127</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Thần Mèo Karin</td>
+            <td>2126</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Rambô</td>
+            <td>2125</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Số 2</td>
+            <td>2124</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Số 2</td>
+            <td>2124</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Số 3</td>
+            <td>2123</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Số 3</td>
+            <td>2123</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Fide cấp 3</td>
+            <td>2088</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Fide cấp 2</td>
+            <td>2057</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Fide cấp 1</td>
+            <td>2026</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Tiểu Đội Trưởng Ginyu</td>
+            <td>1995</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Tiểu Đội Trưởng Ginyu</td>
+            <td>1995</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Số 1</td>
+            <td>1964</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Số 1</td>
+            <td>1964</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Số 4</td>
+            <td>1871</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Số 4</td>
+            <td>1871</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Granola</td>
+            <td>15202</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Tàu Pảy Pảy</td>
+            <td>1210</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Thỏ Bunma</td>
+            <td>4116</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Thỏ Bunma</td>
+            <td>4116</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Ở dơ</td>
+            <td>3995</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Sói hẹc quyn</td>
+            <td>3933</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Xinbatô</td>
+            <td>3558</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Chi Chi</td>
+            <td>3047</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Bum ma</td>
+            <td>3045</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Lý Tiểu Nương</td>
+            <td>3014</td>
+        </tr>
+        <tr>
+            <td>Cải trang</td>
+            <td>Cải trang thành Póc</td>
+            <td>2467</td>
+        </tr>
+        <tr>
+            <td>Cải trang Áo trắng hoa</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9591</td>
+        </tr>
+        <tr>
+            <td>Cải trang Áo vịt cam</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9590</td>
+        </tr>
+        <tr>
+            <td>Cải trang Arale</td>
+            <td>Cải trang Dr. Slum</td>
+            <td>5344</td>
+        </tr>
+        <tr>
+            <td>Cải trang Bill</td>
+            <td>Hóa thân thành thần hủy diệt Bill</td>
+            <td>4847</td>
+        </tr>
+        <tr>
+            <td>Cải trang Bill Bí Ngô</td>
+            <td>Cải trang thành Bill Bí Ngô</td>
+            <td>6985</td>
+        </tr>
+        <tr>
+            <td>Cải trang Black Gohan Rose</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8095</td>
+        </tr>
+        <tr>
+            <td>Cải Trang Black Goku</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>5142</td>
+        </tr>
+        <tr>
+            <td>Cải trang Black Goku</td>
+            <td>Cải trang thành Black Goku</td>
+            <td>5141</td>
+        </tr>
+        <tr>
+            <td>Cải trang Black Goku SSJ White</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8248</td>
+        </tr>
+        <tr>
+            <td>Cải trang bộ xương</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>5105</td>
+        </tr>
+        <tr>
+            <td>Cải trang bộ xương</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>5103</td>
+        </tr>
+        <tr>
+            <td>Cải trang bộ xương</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>5101</td>
+        </tr>
+        <tr>
+            <td>Cải trang Broly</td>
+            <td>Cải trang thành Broly</td>
+            <td>9780</td>
+        </tr>
+        <tr>
+            <td>Cải trang Broly</td>
+            <td>Cải trang thành Broly</td>
+            <td>9749</td>
+        </tr>
+        <tr>
+            <td>Cải trang Broly</td>
+            <td>Cải trang thành Broly</td>
+            <td>9718</td>
+        </tr>
+        <tr>
+            <td>Cải trang Brook</td>
+            <td>Cải trang Hải Tặc Tí Hon</td>
+            <td>5526</td>
+        </tr>
+        <tr>
+            <td>Cải trang Búp bê Arale</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8411</td>
+        </tr>
+        <tr>
+            <td>Cải trang Ca Đíc thời trang</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8693</td>
+        </tr>
+        <tr>
+            <td>Cải trang Cadic</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7862</td>
+        </tr>
+        <tr>
+            <td>Cải trang Cađíc võ sĩ</td>
+            <td>Khi Hp dưới 15% và ở gần Cải Trang Võ Sĩ khác +20% né đòn +20% sức đánh trong 5 giây</td>
+            <td>8970</td>
+        </tr>
+        <tr>
+            <td>Cải trang Captain America</td>
+            <td>Ngoại hình Marvel</td>
+            <td>11456</td>
+        </tr>
+        <tr>
+            <td>Cải trang Caufila Dơi</td>
+            <td>Cải trang thành Caufila Dơi</td>
+            <td>7023</td>
+        </tr>
+        <tr>
+            <td>Cải trang Chaien</td>
+            <td>Hay bắt nạt bè</td>
+            <td>7776</td>
+        </tr>
+        <tr>
+            <td>Cải trang Champa</td>
+            <td>Hóa thân thành thần hủy diệt Champa</td>
+            <td>4879</td>
+        </tr>
+        <tr>
+            <td>Cải trang Chan Xư</td>
+            <td>Cải trang thành Chan Xư</td>
+            <td>3682</td>
+        </tr>
+        <tr>
+            <td>Cải trang Chill</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9405</td>
+        </tr>
+        <tr>
+            <td>Cải trang Chill cấp 2</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9142</td>
+        </tr>
+        <tr>
+            <td>Cải trang Chopper</td>
+            <td>Cải trang Hải Tặc Tí Hon</td>
+            <td>5680</td>
+        </tr>
+        <tr>
+            <td>Cải trang Cooler vàng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6587</td>
+        </tr>
+        <tr>
+            <td>Cải trang Cumber</td>
+            <td>Cải trang thành Cumber</td>
+            <td>11113</td>
+        </tr>
+        <tr>
+            <td>Cải trang dơi nhí</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6094</td>
+        </tr>
+        <tr>
+            <td>Cải trang Dr.Strange</td>
+            <td>Ngoại hình Marvel</td>
+            <td>11593</td>
+        </tr>
+        <tr>
+            <td>Cải trang Drabura Frost</td>
+            <td>Cải trang thành Drabura Frost</td>
+            <td>14332</td>
+        </tr>
+        <tr>
+            <td>Cải trang Đôrêmon</td>
+            <td>Robot Mèo ú đến từ tương lai</td>
+            <td>7189</td>
+        </tr>
+        <tr>
+            <td>Cải trang Fide Black</td>
+            <td>Cải trang thành Fide Black</td>
+            <td>14300</td>
+        </tr>
+        <tr>
+            <td>Cải trang Fide vàng</td>
+            <td>Cải trang Fide Vàng</td>
+            <td>4812</td>
+        </tr>
+        <tr>
+            <td>Cải trang Franky</td>
+            <td>Cải trang Hải Tặc Tí Hon</td>
+            <td>5556</td>
+        </tr>
+        <tr>
+            <td>Cải trang Frost 1</td>
+            <td>Cải trang Frost</td>
+            <td>4719</td>
+        </tr>
+        <tr>
+            <td>Cải trang Frost 2</td>
+            <td>Cải trang Frost</td>
+            <td>4750</td>
+        </tr>
+        <tr>
+            <td>Cải trang Frost 3</td>
+            <td>Cải trang Frost</td>
+            <td>4781</td>
+        </tr>
+        <tr>
+            <td>Cải trang Gatchan</td>
+            <td>Cải trang Dr. Slum</td>
+            <td>5403</td>
+        </tr>
+        <tr>
+            <td>Cải trang Germa 1</td>
+            <td>Cải trang thành Germa 1</td>
+            <td>13167</td>
+        </tr>
+        <tr>
+            <td>Cải trang Germa 2</td>
+            <td>Cải trang thành Germa 2</td>
+            <td>13200</td>
+        </tr>
+        <tr>
+            <td>Cải trang Gohan</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7894</td>
+        </tr>
+        <tr>
+            <td>Cải trang Gohan áo xanh</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8347</td>
+        </tr>
+        <tr>
+            <td>Cải trang Gohan Bư</td>
+            <td>Cải trang thành Gohan Bư</td>
+            <td>4261</td>
+        </tr>
+        <tr>
+            <td>Cải trang Gojo</td>
+            <td>Dùng để thay đổi ngoại hình</td>
+            <td>13613</td>
+        </tr>
+        <tr>
+            <td>Cải trang Goku Noel</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8483</td>
+        </tr>
+        <tr>
+            <td>Cải trang Goku Tarzan</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8785</td>
+        </tr>
+        <tr>
+            <td>Cải trang Goku thời trang</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8662</td>
+        </tr>
+        <tr>
+            <td>Cải trang Goku võ sĩ</td>
+            <td>Khi Hp dưới 15% và ở gần Cải Trang Võ Sĩ khác +20% né đòn +20% sức đánh trong 5 giây</td>
+            <td>8939</td>
+        </tr>
+        <tr>
+            <td>Cải trang Goku Vô Cực</td>
+            <td>Cải trang thành Goku Vô Cực</td>
+            <td>11625</td>
+        </tr>
+        <tr>
+            <td>Cải trang Hải Tặc</td>
+            <td>Cải trang Hải Tặc Tí Hon</td>
+            <td>5721</td>
+        </tr>
+        <tr>
+            <td>Cải trang Hatchiyack</td>
+            <td>Cải trang thành Hatchiyack</td>
+            <td>5963</td>
+        </tr>
+        <tr>
+            <td>Cải trang Hearts</td>
+            <td>Cải trang VIP</td>
+            <td>11393</td>
+        </tr>
+        <tr>
+            <td>Cải trang Hit</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4969</td>
+        </tr>
+        <tr>
+            <td>Cải trang Hổ trắng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8860</td>
+        </tr>
+        <tr>
+            <td>Cải trang Hổ vàng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8828</td>
+        </tr>
+        <tr>
+            <td>Cải trang Hổ xanh</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8891</td>
+        </tr>
+        <tr>
+            <td>Cải trang Hợp Thể</td>
+            <td>Cải trang khi hợp thể</td>
+            <td>5898</td>
+        </tr>
+        <tr>
+            <td>Cải trang Hợp Thể</td>
+            <td>Cải trang khi hợp thể</td>
+            <td>5865</td>
+        </tr>
+        <tr>
+            <td>Cải trang Hợp Thể</td>
+            <td>Cải trang khi hợp thể</td>
+            <td>5834</td>
+        </tr>
+        <tr>
+            <td>Cải trang Hợp Thể</td>
+            <td>Cải trang khi hợp thể</td>
+            <td>5306</td>
+        </tr>
+        <tr>
+            <td>Cải trang Hợp Thể</td>
+            <td>Cải trang khi hợp thể</td>
+            <td>5273</td>
+        </tr>
+        <tr>
+            <td>Cải trang Hợp Thể</td>
+            <td>Cải trang khi hợp thể</td>
+            <td>5242</td>
+        </tr>
+        <tr>
+            <td>Cải trang Jiren</td>
+            <td>Cải trang thành Jiren</td>
+            <td>11282</td>
+        </tr>
+        <tr>
+            <td>Cải trang Kamioren</td>
+            <td>Cải trang thành Kamioren</td>
+            <td>11242</td>
+        </tr>
+        <tr>
+            <td>Cải trang Kiemono Namek</td>
+            <td>Cải trang Kiemono</td>
+            <td>10914</td>
+        </tr>
+        <tr>
+            <td>Cải trang Kiemono Trái đất</td>
+            <td>Cải trang Kiemono</td>
+            <td>10910</td>
+        </tr>
+        <tr>
+            <td>Cải trang Kiemono Xayda</td>
+            <td>Cải trang Kiemono</td>
+            <td>10912</td>
+        </tr>
+        <tr>
+            <td>Cải trang King kong</td>
+            <td>Cải trang thành Android sát thủ</td>
+            <td>2498</td>
+        </tr>
+        <tr>
+            <td>Cải trang Lão Cận</td>
+            <td>Cải trang thành Lão Cận</td>
+            <td>3964</td>
+        </tr>
+        <tr>
+            <td>Cải trang Lích Tên</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8147</td>
+        </tr>
+        <tr>
+            <td>Cải trang Luffy</td>
+            <td>Cải trang Hải Tặc Tí Hon</td>
+            <td>5432</td>
+        </tr>
+        <tr>
+            <td>Cải trang ma trơi</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6091</td>
+        </tr>
+        <tr>
+            <td>Cải trang Mabư Noel</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8621</td>
+        </tr>
+        <tr>
+            <td>Cải trang Mai</td>
+            <td>Cải trang nhóm Pi láp</td>
+            <td>5758</td>
+        </tr>
+        <tr>
+            <td>Cải trang Majin Bư</td>
+            <td>Cải trang thành Majin Bư</td>
+            <td>14364</td>
+        </tr>
+        <tr>
+            <td>Cải trang Mị Nương</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7711</td>
+        </tr>
+        <tr>
+            <td>Cải trang Mighty Mask</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8251</td>
+        </tr>
+        <tr>
+            <td>Cải trang Myuu</td>
+            <td>Cải trang thành Dr Myuu</td>
+            <td>2653</td>
+        </tr>
+        <tr>
+            <td>Cải trang Nami</td>
+            <td>Cải trang Hải Tặc Tí Hon</td>
+            <td>5617</td>
+        </tr>
+        <tr>
+            <td>Cải trang Nobita</td>
+            <td>Nhát như thỏ đế</td>
+            <td>7744</td>
+        </tr>
+        <tr>
+            <td>Cải trang Noel</td>
+            <td>Cải trang Noel</td>
+            <td>7435</td>
+        </tr>
+        <tr>
+            <td>Cải trang Noel</td>
+            <td>Cải trang Noel</td>
+            <td>7430</td>
+        </tr>
+        <tr>
+            <td>Cải trang Noel</td>
+            <td>Cải trang Noel</td>
+            <td>7428</td>
+        </tr>
+        <tr>
+            <td>Cải trang Noel</td>
+            <td>Cải trang Noel</td>
+            <td>7426</td>
+        </tr>
+        <tr>
+            <td>Cải trang Nón rơm mùa hè</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9592</td>
+        </tr>
+        <tr>
+            <td>Cải trang Obotchaman</td>
+            <td>Cải trang Dr. Slum</td>
+            <td>5372</td>
+        </tr>
+        <tr>
+            <td>Cải trang Pi láp</td>
+            <td>Cải trang nhóm Pi láp</td>
+            <td>5827</td>
+        </tr>
+        <tr>
+            <td>Cải trang Píc</td>
+            <td>Cải trang thành Android sát thủ</td>
+            <td>1348</td>
+        </tr>
+        <tr>
+            <td>Cải trang Pico Noel</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8545</td>
+        </tr>
+        <tr>
+            <td>Cải trang Póc</td>
+            <td>Cải trang thành Android sát thủ</td>
+            <td>2467</td>
+        </tr>
+        <tr>
+            <td>Cải trang Póc áo đỏ</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8379</td>
+        </tr>
+        <tr>
+            <td>Cải trang Pocolo</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7926</td>
+        </tr>
+        <tr>
+            <td>Cải trang Pôcôlô thời trang</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8724</td>
+        </tr>
+        <tr>
+            <td>Cải trang Pôcôlô võ sĩ</td>
+            <td>Khi Hp dưới 15% và ở gần Cải Trang Võ Sĩ khác +20% né đòn +20% sức đánh trong 5 giây</td>
+            <td>9001</td>
+        </tr>
+        <tr>
+            <td>Cải trang Radic Noel</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8514</td>
+        </tr>
+        <tr>
+            <td>Cải trang Robin</td>
+            <td>Cải trang Hải Tặc Tí Hon</td>
+            <td>5649</td>
+        </tr>
+        <tr>
+            <td>Cải trang Ryomen Sukuna</td>
+            <td>Cải trang</td>
+            <td>15387</td>
+        </tr>
+        <tr>
+            <td>Cải trang Saibamen</td>
+            <td>Cải trang Saibamen</td>
+            <td>5995</td>
+        </tr>
+        <tr>
+            <td>Cải trang Sanji</td>
+            <td>Cải trang Hải Tặc Tí Hon</td>
+            <td>5495</td>
+        </tr>
+        <tr>
+            <td>Cải trang Siêu Goku Tarzan</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8924</td>
+        </tr>
+        <tr>
+            <td>Cải trang Siêu Thần</td>
+            <td>Cải trang thành Siêu Thần Xayda Tóc Xanh</td>
+            <td>5087</td>
+        </tr>
+        <tr>
+            <td>Cải trang Siêu thần Namếc</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8315</td>
+        </tr>
+        <tr>
+            <td>Cải trang Siêu Thần Trái Đất</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8283</td>
+        </tr>
+        <tr>
+            <td>Cải trang Siêu Thần Xayda</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>5087</td>
+        </tr>
+        <tr>
+            <td>Cải trang Sói Basil</td>
+            <td>3 Con sói đi chung +10% tấn công cho Đệ tử </td>
+            <td>6914</td>
+        </tr>
+        <tr>
+            <td>Cải trang Sói Bergamo</td>
+            <td>3 Con sói đi chung +10% tấn công cho Đệ tử </td>
+            <td>6949</td>
+        </tr>
+        <tr>
+            <td>Cải trang Sói Lavender</td>
+            <td>3 Con sói đi chung +10% tấn công cho Đệ tử </td>
+            <td>6917</td>
+        </tr>
+        <tr>
+            <td>Cải trang Spider Man</td>
+            <td>Ngoại hình Marvel</td>
+            <td>11488</td>
+        </tr>
+        <tr>
+            <td>Cải trang Su</td>
+            <td>Cải trang nhóm Pi láp</td>
+            <td>5789</td>
+        </tr>
+        <tr>
+            <td>Cải Trang Super Black Goku</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>5173</td>
+        </tr>
+        <tr>
+            <td>Cải trang Super Black Goku</td>
+            <td>Cải trang thành Super Black Goku</td>
+            <td>5173</td>
+        </tr>
+        <tr>
+            <td>Cải Trang Super Caulifla</td>
+            <td>Phần thưởng dành cho TOP 1 sự kiện 20/11</td>
+            <td>7023</td>
+        </tr>
+        <tr>
+            <td>Cải trang Super Cumber</td>
+            <td>Cải trang thanh Super Cumber</td>
+            <td>11145</td>
+        </tr>
+        <tr>
+            <td>Cải trang Thanos</td>
+            <td>Ngoại hình Marvel</td>
+            <td>11561</td>
+        </tr>
+        <tr>
+            <td>Cải trang Thần Thor</td>
+            <td>Ngoại hình Marvel</td>
+            <td>11520</td>
+        </tr>
+        <tr>
+            <td>Cải trang Thần Zeno 1</td>
+            <td>Cải trang thành Thần Zeno 1</td>
+            <td>13102</td>
+        </tr>
+        <tr>
+            <td>Cải trang Thần Zeno 2</td>
+            <td>Cải trang thành Thần Zeno 2</td>
+            <td>13135</td>
+        </tr>
+        <tr>
+            <td>Cải trang Thần Zeno 3</td>
+            <td>Cải trang thành Thần Zeno 3</td>
+            <td>13237</td>
+        </tr>
+        <tr>
+            <td>Cải trang Thỏ đại ca</td>
+            <td>Cải trang thành Thỏ đại ca</td>
+            <td>4044</td>
+        </tr>
+        <tr>
+            <td>Cải trang Thống Chế Kilo</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6618</td>
+        </tr>
+        <tr>
+            <td>Cải trang Trâu đen</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7551</td>
+        </tr>
+        <tr>
+            <td>Cải trang Trâu Đốm</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7604</td>
+        </tr>
+        <tr>
+            <td>Cải trang Trâu Đốm</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7602</td>
+        </tr>
+        <tr>
+            <td>Cải trang Trâu Đốm</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7600</td>
+        </tr>
+        <tr>
+            <td>Cải trang Trâu Nâu</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7645</td>
+        </tr>
+        <tr>
+            <td>Cải trang Trâu Nâu</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7643</td>
+        </tr>
+        <tr>
+            <td>Cải trang Trâu Nâu</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7641</td>
+        </tr>
+        <tr>
+            <td>Cải trang Trâu trắng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7520</td>
+        </tr>
+        <tr>
+            <td>Cải trang Trâu vàng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7489</td>
+        </tr>
+        <tr>
+            <td>Cải trang Usopp</td>
+            <td>Cải trang Hải Tặc Tí Hon</td>
+            <td>5587</td>
+        </tr>
+        <tr>
+            <td>Cải trang Uub</td>
+            <td>Cải trang thành Uub (chỉ dành cho đệ tử)</td>
+            <td>8586</td>
+        </tr>
+        <tr>
+            <td>Cải trang VIP</td>
+            <td>Cải trang Thủy Thủ Mặt Trăng</td>
+            <td>7102</td>
+        </tr>
+        <tr>
+            <td>Cải trang VIP</td>
+            <td>Cải trang VIP</td>
+            <td>5304</td>
+        </tr>
+        <tr>
+            <td>Cải trang VIP</td>
+            <td>Cải trang VIP</td>
+            <td>5079</td>
+        </tr>
+        <tr>
+            <td>Cải trang VIP</td>
+            <td>Cải trang VIP</td>
+            <td>5075</td>
+        </tr>
+        <tr>
+            <td>Cải trang Whis</td>
+            <td>Hóa thân thành thiên sứ Whis</td>
+            <td>7679</td>
+        </tr>
+        <tr>
+            <td>Cải trang Xayda</td>
+            <td>Cải trang thành Xayda</td>
+            <td>4938</td>
+        </tr>
+        <tr>
+            <td>Cải trang Xekô</td>
+            <td>Con nhà giàu</td>
+            <td>7808</td>
+        </tr>
+        <tr>
+            <td>Cải trang Xuka</td>
+            <td>Xinh đẹp</td>
+            <td>7357</td>
+        </tr>
+        <tr>
+            <td>Cải trang Yardrat</td>
+            <td>Võ phục của người Yardrat</td>
+            <td>5211</td>
+        </tr>
+        <tr>
+            <td>Cải trang Yardrat</td>
+            <td>Võ phục của người Yardrat</td>
+            <td>5211</td>
+        </tr>
+        <tr>
+            <td>Cải trang Yardrat</td>
+            <td>Võ phục của người Yardrat</td>
+            <td>5211</td>
+        </tr>
+        <tr>
+            <td>Cải trang Zamasu</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8211</td>
+        </tr>
+        <tr>
+            <td>Cải trang Zeno</td>
+            <td>Cải trang thành Zeno</td>
+            <td>13070</td>
+        </tr>
+        <tr>
+            <td>Cải trang Zoro</td>
+            <td>Cải trang Hải Tặc Tí Hon</td>
+            <td>5465</td>
+        </tr>
+        <tr>
+            <td>Cánh Bướm</td>
+            <td>Cánh đeo tăng chỉ số</td>
+            <td>15332</td>
+        </tr>
+        <tr>
+            <td>Cánh dơi Dracula</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7022</td>
+        </tr>
+        <tr>
+            <td>Cánh Đen</td>
+            <td>Cánh đeo tăng chỉ số</td>
+            <td>15347</td>
+        </tr>
+        <tr>
+            <td>Cánh Đỏ</td>
+            <td>Cánh đeo tăng chỉ số</td>
+            <td>15335</td>
+        </tr>
+        <tr>
+            <td>Cánh Robot</td>
+            <td>Cánh đeo tăng chỉ số</td>
+            <td>15356</td>
+        </tr>
+        <tr>
+            <td>Cánh Rồng</td>
+            <td>Cánh đeo tăng chỉ số</td>
+            <td>15350</td>
+        </tr>
+        <tr>
+            <td>Cánh Rơm</td>
+            <td>Cánh đeo tăng chỉ số</td>
+            <td>15363</td>
+        </tr>
+        <tr>
+            <td>Cánh Trắng</td>
+            <td>Cánh đeo tăng chỉ số</td>
+            <td>15341</td>
+        </tr>
+        <tr>
+            <td>Cánh Tử thần</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9605</td>
+        </tr>
+        <tr>
+            <td>Cánh Xám</td>
+            <td>Cánh đeo tăng chỉ số</td>
+            <td>15338</td>
+        </tr>
+        <tr>
+            <td>Cánh Xanh</td>
+            <td>Cánh đeo tăng chỉ số</td>
+            <td>15344</td>
+        </tr>
+        <tr>
+            <td>Cáo Tinh</td>
+            <td>Linh Thú</td>
+            <td>15307</td>
+        </tr>
+        <tr>
+            <td>Capsule 1 sao</td>
+            <td>Giấu bên trong nhiều vật phẩm quý giá</td>
+            <td>7852</td>
+        </tr>
+        <tr>
+            <td>Capsule 2 sao</td>
+            <td>Giấu bên trong nhiều vật phẩm quý giá</td>
+            <td>7853</td>
+        </tr>
+        <tr>
+            <td>Capsule 3 sao</td>
+            <td>Giấu bên trong nhiều vật phẩm quý giá</td>
+            <td>7854</td>
+        </tr>
+        <tr>
+            <td>Capsule Bạc</td>
+            <td>Giấu bên trong nhiều vật phẩm quý giá</td>
+            <td>5005</td>
+        </tr>
+        <tr>
+            <td>Capsule Halloween</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7356</td>
+        </tr>
+        <tr>
+            <td>Capsule hồng</td>
+            <td>Mở nhận 70-150 Hồng ngọc</td>
+            <td>6782</td>
+        </tr>
+        <tr>
+            <td>Capsule quà tặng</td>
+            <td>Giấu bên trong nhiều vật phẩm quý giá</td>
+            <td>2759</td>
+        </tr>
+        <tr>
+            <td>Capsule SEA games</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9109</td>
+        </tr>
+        <tr>
+            <td>Capsule Squid Game</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8443</td>
+        </tr>
+        <tr>
+            <td>Capsule Tết 2022</td>
+            <td>Giấu bên trong nhiều vật phẩm quý giá</td>
+            <td>5004</td>
+        </tr>
+        <tr>
+            <td>Capsule thời trang 5 ngày</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9109</td>
+        </tr>
+        <tr>
+            <td>Capsule thời trang 7 ngày</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9109</td>
+        </tr>
+        <tr>
+            <td>Capsule Trung Thu</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6984</td>
+        </tr>
+        <tr>
+            <td>Capsule Vàng</td>
+            <td>Giấu bên trong nhiều vật phẩm quý giá</td>
+            <td>5004</td>
+        </tr>
+        <tr>
+            <td>Capsule Víp</td>
+            <td>Tàu Vận Chuyển VIP dùng không giới hạn số lần</td>
+            <td>1088</td>
+        </tr>
+        <tr>
+            <td>Cân đẩu vân</td>
+            <td>Bay không tốn KI</td>
+            <td>2273</td>
+        </tr>
+        <tr>
+            <td>Cân đẩu vân ngũ sắc</td>
+            <td>Bay không tốn KI</td>
+            <td>6980</td>
+        </tr>
+        <tr>
+            <td>Cân đẩu vân VIP</td>
+            <td>Bay phục hồi KI</td>
+            <td>2274</td>
+        </tr>
+        <tr>
+            <td>Cầu Thủy Tinh</td>
+            <td>Dùng để Rèn Trang Bị</td>
+            <td>15556</td>
+        </tr>
+        <tr>
+            <td>Cây thông</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7395</td>
+        </tr>
+        <tr>
+            <td>Cây trúc</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7597</td>
+        </tr>
+        <tr>
+            <td>Charizard Shiny</td>
+            <td>Pokemon</td>
+            <td>14007</td>
+        </tr>
+        <tr>
+            <td>ChiChi Siêu nhân</td>
+            <td>Cải trang Siêu nhân</td>
+            <td>9433</td>
+        </tr>
+        <tr>
+            <td>Chiến Binh</td>
+            <td>Linh Thú</td>
+            <td>15247</td>
+        </tr>
+        <tr>
+            <td>Chiến thuyền Tennis</td>
+            <td>Chiến thuyền phục hồi HP</td>
+            <td>3894</td>
+        </tr>
+        <tr>
+            <td>Chim Cú Mèo</td>
+            <td>Linh Thú</td>
+            <td>15325</td>
+        </tr>
+        <tr>
+            <td>Chim Tím</td>
+            <td>Linh Thú Chim</td>
+            <td>15241</td>
+        </tr>
+        <tr>
+            <td>Chim Vàng</td>
+            <td>Linh Thú</td>
+            <td>15303</td>
+        </tr>
+        <tr>
+            <td>Chim Xanh Vàng</td>
+            <td>Linh Thú</td>
+            <td>15323</td>
+        </tr>
+        <tr>
+            <td>Chổi bay Phù Thủy</td>
+            <td>Bay không tốn KI</td>
+            <td>7056</td>
+        </tr>
+        <tr>
+            <td>Christmas Pig</td>
+            <td>Vật phẩm dùng để bay không tốn KI</td>
+            <td>10855</td>
+        </tr>
+        <tr>
+            <td>Chữ ấn</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>1406</td>
+        </tr>
+        <tr>
+            <td>Chữ giải</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>1403</td>
+        </tr>
+        <tr>
+            <td>Chữ khai</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>1404</td>
+        </tr>
+        <tr>
+            <td>Chữ phong</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>1407</td>
+        </tr>
+        <tr>
+            <td>Cỏ Sức Mạnh</td>
+            <td>Sử dụng nhận được 10 tỷ sức mạnh</td>
+            <td>15537</td>
+        </tr>
+        <tr>
+            <td>Cỏ tươi</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7594</td>
+        </tr>
+        <tr>
+            <td>Cỏ tươi</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7594</td>
+        </tr>
+        <tr>
+            <td>Con Chó</td>
+            <td>Pet</td>
+            <td>6161</td>
+        </tr>
+        <tr>
+            <td>Con cua</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6571</td>
+        </tr>
+        <tr>
+            <td>Con diều</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9611</td>
+        </tr>
+        <tr>
+            <td>Con Gà</td>
+            <td>Pet</td>
+            <td>5224</td>
+        </tr>
+        <tr>
+            <td>Con Rồng</td>
+            <td>Linh Thú</td>
+            <td>15315</td>
+        </tr>
+        <tr>
+            <td>Công thức</td>
+            <td>Chế tạo trang bị thiên sứ Namếc</td>
+            <td>10212</td>
+        </tr>
+        <tr>
+            <td>Công thức</td>
+            <td>Chế tạo trang bị thiên sứ Xayda</td>
+            <td>10211</td>
+        </tr>
+        <tr>
+            <td>Công thức</td>
+            <td>Chế tạo trang bị thiên sứ Trái Đất</td>
+            <td>10210</td>
+        </tr>
+        <tr>
+            <td>Công thức VIP</td>
+            <td>Chế tạo trang bị thiên sứ Namếc</td>
+            <td>10215</td>
+        </tr>
+        <tr>
+            <td>Công thức VIP</td>
+            <td>Chế tạo trang bị thiên sứ Xayda</td>
+            <td>10214</td>
+        </tr>
+        <tr>
+            <td>Công thức VIP</td>
+            <td>Chế tạo trang bị thiên sứ Trái Đất</td>
+            <td>10213</td>
+        </tr>
+        <tr>
+            <td>Cột nhà</td>
+            <td>Bay không tốn KI</td>
+            <td>7063</td>
+        </tr>
+        <tr>
+            <td>Cờ cam</td>
+            <td>Bật để PK đồ sát các màu cờ khác</td>
+            <td>2328</td>
+        </tr>
+        <tr>
+            <td>Cờ cam</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1029</td>
+        </tr>
+        <tr>
+            <td>Cờ cổ động</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9403</td>
+        </tr>
+        <tr>
+            <td>Cờ đen</td>
+            <td>Bật để PK đồ sát các màu cờ khác</td>
+            <td>9065</td>
+        </tr>
+        <tr>
+            <td>Cờ đen</td>
+            <td>Bật để PK đồ sát tất cả</td>
+            <td>2331</td>
+        </tr>
+        <tr>
+            <td>Cờ đen</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1026</td>
+        </tr>
+        <tr>
+            <td>Cờ đỏ</td>
+            <td>Bật để PK đồ sát các màu cờ khác</td>
+            <td>2323</td>
+        </tr>
+        <tr>
+            <td>Cờ đỏ</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1034</td>
+        </tr>
+        <tr>
+            <td>Cờ Hoa đăng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9843</td>
+        </tr>
+        <tr>
+            <td>Cờ Hoa sen</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9844</td>
+        </tr>
+        <tr>
+            <td>Cờ hồng</td>
+            <td>Bật để PK đồ sát các màu cờ khác</td>
+            <td>2329</td>
+        </tr>
+        <tr>
+            <td>Cờ hồng</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1028</td>
+        </tr>
+        <tr>
+            <td>Cờ Kaiô</td>
+            <td></td>
+            <td>4386</td>
+        </tr>
+        <tr>
+            <td>Cờ lục</td>
+            <td>Bật để PK đồ sát các màu cờ khác</td>
+            <td>2324</td>
+        </tr>
+        <tr>
+            <td>Cờ Mabư</td>
+            <td></td>
+            <td>4385</td>
+        </tr>
+        <tr>
+            <td>Cờ tím</td>
+            <td>Bật để PK đồ sát các màu cờ khác</td>
+            <td>2327</td>
+        </tr>
+        <tr>
+            <td>Cờ tím</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1030</td>
+        </tr>
+        <tr>
+            <td>Cờ trắng</td>
+            <td>Bật để PK đồ sát các màu cờ khác</td>
+            <td>9066</td>
+        </tr>
+        <tr>
+            <td>Cờ vàng</td>
+            <td>Bật để PK đồ sát các màu cờ khác</td>
+            <td>2326</td>
+        </tr>
+        <tr>
+            <td>Cờ vàng</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1031</td>
+        </tr>
+        <tr>
+            <td>Cờ xám</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1027</td>
+        </tr>
+        <tr>
+            <td>Cờ xanh</td>
+            <td>Bật PK đồ sát các màu cờ khác</td>
+            <td>2330</td>
+        </tr>
+        <tr>
+            <td>Cờ xanh biển</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1032</td>
+        </tr>
+        <tr>
+            <td>Cờ xanh dạ</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1025</td>
+        </tr>
+        <tr>
+            <td>Cờ xanh dương</td>
+            <td>Bật để PK đồ sát các màu cờ khác</td>
+            <td>2325</td>
+        </tr>
+        <tr>
+            <td>Cờ xanh lá</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1033</td>
+        </tr>
+        <tr>
+            <td>CT HỒNG</td>
+            <td>Cải trang</td>
+            <td>10440</td>
+        </tr>
+        <tr>
+            <td>CT Hợp thể C3 Namec</td>
+            <td>Ngoại hình BTC3</td>
+            <td>13510</td>
+        </tr>
+        <tr>
+            <td>CT Hợp thể C3 Trái đất</td>
+            <td>Ngoại hình BTC3</td>
+            <td>13574</td>
+        </tr>
+        <tr>
+            <td>CT Hợp thể C3 Xayda</td>
+            <td>Ngoại hình BTC3</td>
+            <td>13477</td>
+        </tr>
+        <tr>
+            <td>CT Hợp thể VIP</td>
+            <td>Ngoại hình VIP</td>
+            <td>13542</td>
+        </tr>
+        <tr>
+            <td>Củ cà rốt</td>
+            <td>Đổi 99 củ cà rốt lấy cải trang hot tại quầy bánh trung thu</td>
+            <td>4083</td>
+        </tr>
+        <tr>
+            <td>Cua đỏ</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9621</td>
+        </tr>
+        <tr>
+            <td>Cua rang me</td>
+            <td>Tặng cho Whis hoặc ăn vào để tăng 5% sức đánh trong vòng 10 phút</td>
+            <td>8060</td>
+        </tr>
+        <tr>
+            <td>Cục xương</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4032</td>
+        </tr>
+        <tr>
+            <td>Cuồng nộ</td>
+            <td>Trong vòng tối đa 10 phút +100% sức đánh gốc</td>
+            <td>2754</td>
+        </tr>
+        <tr>
+            <td>Cuồng Nộ Siêu Cấp</td>
+            <td>Trong vòng tối đa 10 phút +120% sức đánh gốc</td>
+            <td>10716</td>
+        </tr>
+        <tr>
+            <td>Cúp vàng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9402</td>
+        </tr>
+        <tr>
+            <td>Danh hiệu Cao Thủ</td>
+            <td>Danh hiệu có thể nâng cấp</td>
+            <td>15523</td>
+        </tr>
+        <tr>
+            <td>Danh hiệu Đại Gia</td>
+            <td>Danh hiệu có thể nâng cấp</td>
+            <td>15510</td>
+        </tr>
+        <tr>
+            <td>Danh hiệu Fan Cứng</td>
+            <td>Danh hiệu có thể nâng cấp</td>
+            <td>15511</td>
+        </tr>
+        <tr>
+            <td>Danh hiệu TOP 1 NẠP</td>
+            <td>Độc nhất vô nhị</td>
+            <td>10678</td>
+        </tr>
+        <tr>
+            <td>Danh hiệu TOP 2 NẠP</td>
+            <td>Độc nhất vô nhị</td>
+            <td>11792</td>
+        </tr>
+        <tr>
+            <td>Danh hiệu TOP 3 NẠP</td>
+            <td>Độc nhất vô nhị</td>
+            <td>11793</td>
+        </tr>
+        <tr>
+            <td>Danh hiệu TopServer</td>
+            <td>Danh hiệu có thể nâng cấp</td>
+            <td>15529</td>
+        </tr>
+        <tr>
+            <td>Danh hiệu Trùm Cuối</td>
+            <td>Danh hiệu có thể nâng cấp</td>
+            <td>15517</td>
+        </tr>
+        <tr>
+            <td>Dao răng cưa</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9708</td>
+        </tr>
+        <tr>
+            <td>Diều rồng</td>
+            <td>Giúp tăng chỉ số bản thân</td>
+            <td>9614</td>
+        </tr>
+        <tr>
+            <td>Dò tuần lộc</td>
+            <td>Dùng để tìm kiếm tuần lộc</td>
+            <td>15053</td>
+        </tr>
+        <tr>
+            <td>Dreamlet</td>
+            <td>Thú cưng</td>
+            <td>15056</td>
+        </tr>
+        <tr>
+            <td>Dưa Hấu</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4671</td>
+        </tr>
+        <tr>
+            <td>Dưa Hấu</td>
+            <td></td>
+            <td>1040</td>
+        </tr>
+        <tr>
+            <td>Đá bảo vệ</td>
+            <td>Bảo vệ trang bị không bị rớt cấp</td>
+            <td>9406</td>
+        </tr>
+        <tr>
+            <td>Đá Khắc Chỉ Số</td>
+            <td>Dùng để khắc chỉ số ngọc bội</td>
+            <td>15541</td>
+        </tr>
+        <tr>
+            <td>Đá Lục Bảo</td>
+            <td>Dùng để nâng cấp Rada. Gặp Bà Hạt Mít sử dụng</td>
+            <td>1420</td>
+        </tr>
+        <tr>
+            <td>Đá ma thuật</td>
+            <td>Dùng để mở khóa chỉ số ẩn</td>
+            <td>15076</td>
+        </tr>
+        <tr>
+            <td>Đá may mắn cấp 1</td>
+            <td>Vật phẩm hổ trợ</td>
+            <td>10206</td>
+        </tr>
+        <tr>
+            <td>Đá may mắn cấp 2</td>
+            <td>Vật phẩm hổ trợ</td>
+            <td>10207</td>
+        </tr>
+        <tr>
+            <td>Đá may mắn cấp 3</td>
+            <td>Vật phẩm hổ trợ</td>
+            <td>10208</td>
+        </tr>
+        <tr>
+            <td>Đá may mắn cấp 4</td>
+            <td>Vật phẩm hổ trợ</td>
+            <td>10209</td>
+        </tr>
+        <tr>
+            <td>Đá may mắn cấp 5</td>
+            <td>Vật phẩm hổ trợ</td>
+            <td>10196</td>
+        </tr>
+        <tr>
+            <td>Đá nâng cấp cấp 1</td>
+            <td>Vật phẩm hổ trợ</td>
+            <td>10202</td>
+        </tr>
+        <tr>
+            <td>Đá nâng cấp cấp 2</td>
+            <td>Vật phẩm hổ trợ</td>
+            <td>10203</td>
+        </tr>
+        <tr>
+            <td>Đá nâng cấp cấp 3</td>
+            <td>Vật phẩm hổ trợ</td>
+            <td>10204</td>
+        </tr>
+        <tr>
+            <td>Đá nâng cấp cấp 4</td>
+            <td>Vật phẩm hổ trợ</td>
+            <td>10205</td>
+        </tr>
+        <tr>
+            <td>Đá nâng cấp cấp 5</td>
+            <td>Vật phẩm hổ trợ</td>
+            <td>10195</td>
+        </tr>
+        <tr>
+            <td>Đá ngũ sắc</td>
+            <td>Loại đá quý hiếm nhất trong thế giới Ngọc Rồng.</td>
+            <td>6467</td>
+        </tr>
+        <tr>
+            <td>Đá ngục tù 1</td>
+            <td>Có tác dụng 20 phút. Cộng 20%SD, 30% HP KI</td>
+            <td>11274</td>
+        </tr>
+        <tr>
+            <td>Đá Pháp Sư</td>
+            <td>Pháp sư hóa trang bị</td>
+            <td>16007</td>
+        </tr>
+        <tr>
+            <td>Đá Phong Ấn</td>
+            <td>Dùng Để Rèn Trang Bị</td>
+            <td>15579</td>
+        </tr>
+        <tr>
+            <td>Đá Ruby</td>
+            <td>Dùng để nâng cấp Quần. Gặp Bà Hạt Mít sử dụng</td>
+            <td>1416</td>
+        </tr>
+        <tr>
+            <td>Đá Saphia</td>
+            <td>Dùng để nâng cấp Giày. Gặp Bà Hạt Mít sử dụng</td>
+            <td>1419</td>
+        </tr>
+        <tr>
+            <td>Đá thạch anh tím</td>
+            <td>Dùng để nâng cấp Găng. Gặp Bà Hạt Mít sử dụng</td>
+            <td>1418</td>
+        </tr>
+        <tr>
+            <td>Đá Tiến Hóa Ngọc Bội</td>
+            <td>Dùng để tiến hóa ngọc bội</td>
+            <td>15574</td>
+        </tr>
+        <tr>
+            <td>Đá Tinh Luyện</td>
+            <td>Dùng Để Tinh Luyện Trang Bị</td>
+            <td>15555</td>
+        </tr>
+        <tr>
+            <td>Đá Titan</td>
+            <td>Dùng để nâng cấp Áo. Gặp Bà Hạt Mít sử dụng</td>
+            <td>1417</td>
+        </tr>
+        <tr>
+            <td>Đá xanh lam</td>
+            <td>Dùng để nâng cấp bông tai</td>
+            <td>8620</td>
+        </tr>
+        <tr>
+            <td>Đại</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>1406</td>
+        </tr>
+        <tr>
+            <td>Đại Bàng</td>
+            <td>Linh Thú</td>
+            <td>15309</td>
+        </tr>
+        <tr>
+            <td>Đại Bàng Nâu</td>
+            <td>Linh Thú</td>
+            <td>15311</td>
+        </tr>
+        <tr>
+            <td>Đao</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1044</td>
+        </tr>
+        <tr>
+            <td>Đặt tên đệ tử</td>
+            <td>Khi có vật phẩm này trong hành trang</td>
+            <td>2989</td>
+        </tr>
+        <tr>
+            <td>Đậu thần cấp 1</td>
+            <td>Thức ăn phục hồi HP và KI</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Đậu thần cấp 10</td>
+            <td>Thức ăn phục hồi HP và KI</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Đậu thần cấp 2</td>
+            <td>Thức ăn phục hồi HP và KI</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Đậu thần cấp 3</td>
+            <td>Thức ăn phục hồi HP và KI</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Đậu thần cấp 4</td>
+            <td>Thức ăn phục hồi HP và KI</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Đậu thần cấp 5</td>
+            <td>Thức ăn phục hồi HP và KI</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Đậu thần cấp 6</td>
+            <td>Thức ăn phục hồi HP và KI</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Đậu thần cấp 7</td>
+            <td>Thức ăn phục hồi HP và KI</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Đậu thần cấp 8</td>
+            <td>Thức ăn phục hồi HP và KI</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Đậu thần cấp 9</td>
+            <td>Thức ăn phục hồi HP và KI</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Đậu xanh</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7070</td>
+        </tr>
+        <tr>
+            <td>Đẻ trứng lv1</td>
+            <td>học kỹ năng đẻ trứng</td>
+            <td>722</td>
+        </tr>
+        <tr>
+            <td>Đẻ trứng lv2</td>
+            <td>nâng đẻ trứng lên cấp 2</td>
+            <td>722</td>
+        </tr>
+        <tr>
+            <td>Đẻ trứng lv3</td>
+            <td>nâng đẻ trứng lên cấp 3</td>
+            <td>722</td>
+        </tr>
+        <tr>
+            <td>Đẻ trứng lv4</td>
+            <td>nâng đẻ trứng lên cấp 4</td>
+            <td>722</td>
+        </tr>
+        <tr>
+            <td>Đẻ trứng lv5</td>
+            <td>nâng đẻ trứng lên cấp 5</td>
+            <td>722</td>
+        </tr>
+        <tr>
+            <td>Đẻ trứng lv6</td>
+            <td>nâng đẻ trứng lên cấp 6</td>
+            <td>722</td>
+        </tr>
+        <tr>
+            <td>Đẻ trứng lv7</td>
+            <td>nâng đẻ trứng lên cấp 7</td>
+            <td>722</td>
+        </tr>
+        <tr>
+            <td>Đô Đốc Hải Long Tinh</td>
+            <td>Namec</td>
+            <td>10914</td>
+        </tr>
+        <tr>
+            <td>Đô Đốc Hải Tinh Vân</td>
+            <td>Khỉ hàng fake</td>
+            <td>2238</td>
+        </tr>
+        <tr>
+            <td>Đô Đốc Hải Vân Tinh </td>
+            <td>Xayda</td>
+            <td>10911</td>
+        </tr>
+        <tr>
+            <td>Đổi đệ tử</td>
+            <td>Đổi đệ tử khác hoàn toàn mới</td>
+            <td>737</td>
+        </tr>
+        <tr>
+            <td>Đùi gà</td>
+            <td>Cần tìm đủ 10 và mang về cho ông Gohan</td>
+            <td>643</td>
+        </tr>
+        <tr>
+            <td>Đùi gà nướng</td>
+            <td>Ăn vào sẽ phục hồi toàn bộ HP MP</td>
+            <td>643</td>
+        </tr>
+        <tr>
+            <td>Đùi heo Xayda</td>
+            <td>Cần tìm đủ 10 và mang về cho ông Paragus</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Đuôi khỉ</td>
+            <td>Sử dụng có tác dụng 10 phút tăng các dòng chỉ số và TNSM</td>
+            <td>5072</td>
+        </tr>
+        <tr>
+            <td>Đuôi khỉ</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>5072</td>
+        </tr>
+        <tr>
+            <td>Đứa bé</td>
+            <td>Đứa bé trong phi thuyền tennis</td>
+            <td>737</td>
+        </tr>
+        <tr>
+            <td>FAN CỨNG</td>
+            <td>Danh Hiệu </td>
+            <td>15258</td>
+        </tr>
+        <tr>
+            <td>Fire bird</td>
+            <td>Thú cưỡi Basil</td>
+            <td>8210</td>
+        </tr>
+        <tr>
+            <td>Firenix</td>
+            <td>Thú cưng</td>
+            <td>15060</td>
+        </tr>
+        <tr>
+            <td>Flareon</td>
+            <td>Pokemon</td>
+            <td>14021</td>
+        </tr>
+        <tr>
+            <td>Gà</td>
+            <td>Pet giỗ tổ</td>
+            <td>12316</td>
+        </tr>
+        <tr>
+            <td>Gà quay nguyên con</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8129</td>
+        </tr>
+        <tr>
+            <td>Găng bạc</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>946</td>
+        </tr>
+        <tr>
+            <td>Găng bạc Goku</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>1707</td>
+        </tr>
+        <tr>
+            <td>Găng bạc Zealot</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>1710</td>
+        </tr>
+        <tr>
+            <td>Găng da Calic</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>1706</td>
+        </tr>
+        <tr>
+            <td>Găng da Pico</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>961</td>
+        </tr>
+        <tr>
+            <td>Găng da Xayda</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>956</td>
+        </tr>
+        <tr>
+            <td>Găng đồng</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>410</td>
+        </tr>
+        <tr>
+            <td>Găng đồng Tron</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>1711</td>
+        </tr>
+        <tr>
+            <td>Găng Hủy Diệt</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>6318</td>
+        </tr>
+        <tr>
+            <td>Găng Hủy Diệt</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>6318</td>
+        </tr>
+        <tr>
+            <td>Găng Hủy Diệt</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>6318</td>
+        </tr>
+        <tr>
+            <td>Găng jean Calic</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>1706</td>
+        </tr>
+        <tr>
+            <td>Găng Kaio</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>1709</td>
+        </tr>
+        <tr>
+            <td>Găng len cứng</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>948</td>
+        </tr>
+        <tr>
+            <td>Găng len Pico</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>412</td>
+        </tr>
+        <tr>
+            <td>Găng lông đỏ</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>1708</td>
+        </tr>
+        <tr>
+            <td>Găng lông Xayda</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>956</td>
+        </tr>
+        <tr>
+            <td>Găng lưỡng long</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>1709</td>
+        </tr>
+        <tr>
+            <td>Găng sắt</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>410</td>
+        </tr>
+        <tr>
+            <td>Găng sắt Tron</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>1711</td>
+        </tr>
+        <tr>
+            <td>Găng siêu Xayda</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>1708</td>
+        </tr>
+        <tr>
+            <td>Găng sợi gai</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>411</td>
+        </tr>
+        <tr>
+            <td>Găng sợi len</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>411</td>
+        </tr>
+        <tr>
+            <td>Găng Thanos</td>
+            <td>Cánh đeo tăng chỉ số</td>
+            <td>11560</td>
+        </tr>
+        <tr>
+            <td>Găng Thần Linh</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>4650</td>
+        </tr>
+        <tr>
+            <td>Găng Thần Namếc</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>4659</td>
+        </tr>
+        <tr>
+            <td>Găng Thần Xayda</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>4656</td>
+        </tr>
+        <tr>
+            <td>Găng Thiên Sứ</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>10188</td>
+        </tr>
+        <tr>
+            <td>Găng Thiên Sứ</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>10178</td>
+        </tr>
+        <tr>
+            <td>Găng Thiên Sứ</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>10168</td>
+        </tr>
+        <tr>
+            <td>Găng thun cứng</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>948</td>
+        </tr>
+        <tr>
+            <td>Găng thun dày</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>407</td>
+        </tr>
+        <tr>
+            <td>Găng thun đen</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>408</td>
+        </tr>
+        <tr>
+            <td>Găng thun Kame</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>947</td>
+        </tr>
+        <tr>
+            <td>Găng thun Pico</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>412</td>
+        </tr>
+        <tr>
+            <td>Găng thun thô</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>409</td>
+        </tr>
+        <tr>
+            <td>Găng vải dày</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>407</td>
+        </tr>
+        <tr>
+            <td>Găng vải đen</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>408</td>
+        </tr>
+        <tr>
+            <td>Găng vải Kame</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>947</td>
+        </tr>
+        <tr>
+            <td>Găng vải Pico</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>961</td>
+        </tr>
+        <tr>
+            <td>Găng vải thô</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>409</td>
+        </tr>
+        <tr>
+            <td>Găng vàng</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>946</td>
+        </tr>
+        <tr>
+            <td>Găng vàng Goku</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>1707</td>
+        </tr>
+        <tr>
+            <td>Găng vàng Zealot</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>1710</td>
+        </tr>
+        <tr>
+            <td>Găng võ goku</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>953</td>
+        </tr>
+        <tr>
+            <td>Găng võ Kame</td>
+            <td>Giúp tăng sức đánh</td>
+            <td>953</td>
+        </tr>
+        <tr>
+            <td>Gậy</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1039</td>
+        </tr>
+        <tr>
+            <td>Gậy như ý</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9704</td>
+        </tr>
+        <tr>
+            <td>Gậy như ý</td>
+            <td>Vật phẩm sự kiện. Dùng để bay phục hồi HP</td>
+            <td>8482</td>
+        </tr>
+        <tr>
+            <td>Gậy phát sáng</td>
+            <td>Đeo vô sáng lung linh</td>
+            <td>12321</td>
+        </tr>
+        <tr>
+            <td>Gậy phép</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1084</td>
+        </tr>
+        <tr>
+            <td>Gậy Quy Lão</td>
+            <td>Bay không tốn KI</td>
+            <td>10485</td>
+        </tr>
+        <tr>
+            <td>Ghế bay</td>
+            <td>Bay không tốn KI</td>
+            <td>7221</td>
+        </tr>
+        <tr>
+            <td>Giáp tập luyện cấp 1</td>
+            <td>Khi mặc vào sẽ đánh yếu hơn bình thường 10%</td>
+            <td>4429</td>
+        </tr>
+        <tr>
+            <td>Giáp tập luyện cấp 1</td>
+            <td>Khi mặc vào sẽ đánh yếu hơn bình thường 10%</td>
+            <td>4429</td>
+        </tr>
+        <tr>
+            <td>Giáp tập luyện cấp 2</td>
+            <td>Khi mặc vào sẽ đánh yếu hơn bình thường 20%</td>
+            <td>4430</td>
+        </tr>
+        <tr>
+            <td>Giáp tập luyện cấp 2</td>
+            <td>Khi mặc vào sẽ đánh yếu hơn bình thường 20%</td>
+            <td>4430</td>
+        </tr>
+        <tr>
+            <td>Giáp tập luyện cấp 3</td>
+            <td>Khi mặc vào sẽ đánh yếu hơn bình thường 30%</td>
+            <td>4431</td>
+        </tr>
+        <tr>
+            <td>Giáp tập luyện cấp 3</td>
+            <td>Khi mặc vào sẽ đánh yếu hơn bình thường 30%</td>
+            <td>4431</td>
+        </tr>
+        <tr>
+            <td>Giáp Xên bọ hung</td>
+            <td>Trong vòng tối đa 10 phút giảm 50% sát thương </td>
+            <td>2757</td>
+        </tr>
+        <tr>
+            <td>Giáp Xên Siêu Cấp</td>
+            <td>Trong vòng tối đa 10 phút +120% HP</td>
+            <td>10712</td>
+        </tr>
+        <tr>
+            <td>Giày bạc</td>
+            <td>Giúp tăng MP</td>
+            <td>936</td>
+        </tr>
+        <tr>
+            <td>Giày bạc Goku</td>
+            <td>Giúp tăng MP</td>
+            <td>1701</td>
+        </tr>
+        <tr>
+            <td>Giày bạc Zealot</td>
+            <td>Giúp tăng MP</td>
+            <td>1705</td>
+        </tr>
+        <tr>
+            <td>Giày cao su cứng</td>
+            <td>Giúp tăng MP</td>
+            <td>945</td>
+        </tr>
+        <tr>
+            <td>Giày cao su đế dày</td>
+            <td>Giúp tăng MP</td>
+            <td>402</td>
+        </tr>
+        <tr>
+            <td>Giày cao su Kame</td>
+            <td>Giúp tăng MP</td>
+            <td>940</td>
+        </tr>
+        <tr>
+            <td>Giày da Calic</td>
+            <td>Giúp tăng MP</td>
+            <td>1700</td>
+        </tr>
+        <tr>
+            <td>Giày da Pico</td>
+            <td>Giúp tăng MP</td>
+            <td>963</td>
+        </tr>
+        <tr>
+            <td>Giày da Xayda</td>
+            <td>Giúp tăng MP</td>
+            <td>957</td>
+        </tr>
+        <tr>
+            <td>Giày đồng Tron</td>
+            <td>Giúp tăng MP</td>
+            <td>1704</td>
+        </tr>
+        <tr>
+            <td>Giày jean Calic</td>
+            <td>Giúp tăng MP</td>
+            <td>1700</td>
+        </tr>
+        <tr>
+            <td>Giày Kaio</td>
+            <td>Giúp tăng MP</td>
+            <td>1703</td>
+        </tr>
+        <tr>
+            <td>Giày lông đỏ</td>
+            <td>Giúp tăng MP</td>
+            <td>1702</td>
+        </tr>
+        <tr>
+            <td>Giày lông Xayda</td>
+            <td>Giúp tăng MP</td>
+            <td>957</td>
+        </tr>
+        <tr>
+            <td>Giày lưỡng long</td>
+            <td>Giúp tăng MP</td>
+            <td>1703</td>
+        </tr>
+        <tr>
+            <td>Giày nhựa cứng</td>
+            <td>Giúp tăng MP</td>
+            <td>945</td>
+        </tr>
+        <tr>
+            <td>Giày nhựa đế dày</td>
+            <td>Giúp tăng MP</td>
+            <td>402</td>
+        </tr>
+        <tr>
+            <td>Giày nhựa Kame</td>
+            <td>Giúp tăng MP</td>
+            <td>940</td>
+        </tr>
+        <tr>
+            <td>Giày sắt Pico</td>
+            <td>Giúp tăng MP</td>
+            <td>963</td>
+        </tr>
+        <tr>
+            <td>Giày sắt Tron</td>
+            <td>Giúp tăng MP</td>
+            <td>1704</td>
+        </tr>
+        <tr>
+            <td>Giày siêu Xayda</td>
+            <td>Giúp tăng MP</td>
+            <td>1702</td>
+        </tr>
+        <tr>
+            <td>Giày vàng</td>
+            <td>Giúp tăng MP</td>
+            <td>936</td>
+        </tr>
+        <tr>
+            <td>Giày vàng Goku</td>
+            <td>Giúp tăng MP</td>
+            <td>1701</td>
+        </tr>
+        <tr>
+            <td>Giày vàng Zealot</td>
+            <td>Giúp tăng MP</td>
+            <td>1705</td>
+        </tr>
+        <tr>
+            <td>Giày võ goku</td>
+            <td>Giúp tăng MP</td>
+            <td>952</td>
+        </tr>
+        <tr>
+            <td>Giày võ kame</td>
+            <td>Giúp tăng MP</td>
+            <td>952</td>
+        </tr>
+        <tr>
+            <td>Giầy cao su</td>
+            <td>Giúp tăng MP</td>
+            <td>401</td>
+        </tr>
+        <tr>
+            <td>Giầy cao su Pico</td>
+            <td>Giúp tăng MP</td>
+            <td>406</td>
+        </tr>
+        <tr>
+            <td>Giầy cao su thô</td>
+            <td>Giúp tăng MP</td>
+            <td>403</td>
+        </tr>
+        <tr>
+            <td>Giầy đồng</td>
+            <td>Giúp tăng MP</td>
+            <td>404</td>
+        </tr>
+        <tr>
+            <td>Giầy Hủy Diệt</td>
+            <td>Giúp tăng MP</td>
+            <td>6322</td>
+        </tr>
+        <tr>
+            <td>Giầy Hủy Diệt</td>
+            <td>Giúp tăng MP</td>
+            <td>6317</td>
+        </tr>
+        <tr>
+            <td>Giầy Hủy Diệt</td>
+            <td>Giúp tăng MP</td>
+            <td>6312</td>
+        </tr>
+        <tr>
+            <td>Giấy màu</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9846</td>
+        </tr>
+        <tr>
+            <td>Giầy nhựa</td>
+            <td>Giúp tăng MP</td>
+            <td>401</td>
+        </tr>
+        <tr>
+            <td>Giầy nhựa Pico</td>
+            <td>Giúp tăng MP</td>
+            <td>406</td>
+        </tr>
+        <tr>
+            <td>Giầy sắt</td>
+            <td>Giúp tăng MP</td>
+            <td>404</td>
+        </tr>
+        <tr>
+            <td>Giầy sợi gai</td>
+            <td>Giúp tăng MP</td>
+            <td>405</td>
+        </tr>
+        <tr>
+            <td>Giầy sợi len</td>
+            <td>Giúp tăng MP</td>
+            <td>405</td>
+        </tr>
+        <tr>
+            <td>Giầy Thần Linh</td>
+            <td>Giúp tăng MP</td>
+            <td>4649</td>
+        </tr>
+        <tr>
+            <td>Giầy Thần Namếc</td>
+            <td>Giúp tăng MP</td>
+            <td>4660</td>
+        </tr>
+        <tr>
+            <td>Giầy Thần Xayda</td>
+            <td>Giúp tăng MP</td>
+            <td>4655</td>
+        </tr>
+        <tr>
+            <td>Giầy Thiên Sứ</td>
+            <td>Giúp tăng MP</td>
+            <td>10187</td>
+        </tr>
+        <tr>
+            <td>Giầy Thiên Sứ</td>
+            <td>Giúp tăng MP</td>
+            <td>10177</td>
+        </tr>
+        <tr>
+            <td>Giầy Thiên Sứ</td>
+            <td>Giúp tăng MP</td>
+            <td>10167</td>
+        </tr>
+        <tr>
+            <td>Giầy vải thô</td>
+            <td>Giúp tăng MP</td>
+            <td>403</td>
+        </tr>
+        <tr>
+            <td>Gigantamax Lapras</td>
+            <td>Pokemon</td>
+            <td>14015</td>
+        </tr>
+        <tr>
+            <td>Giỏ bơ</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1043</td>
+        </tr>
+        <tr>
+            <td>Giỏ cà rốt</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1037</td>
+        </tr>
+        <tr>
+            <td>Giỏ chuối</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1042</td>
+        </tr>
+        <tr>
+            <td>Giỏ củ cải trắng</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1036</td>
+        </tr>
+        <tr>
+            <td>Giỏ dưa hấu</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1040</td>
+        </tr>
+        <tr>
+            <td>Giỏ thức ăn</td>
+            <td>Vật phẩm nhiệm vụ</td>
+            <td>9489</td>
+        </tr>
+        <tr>
+            <td>Gohan Siêu nhân</td>
+            <td>Cải trang Siêu nhân</td>
+            <td>9407</td>
+        </tr>
+        <tr>
+            <td>Gohan SSJ5</td>
+            <td>Cải trang</td>
+            <td>12100</td>
+        </tr>
+        <tr>
+            <td>Gói 10 Rađa dò ngọc</td>
+            <td>Máy dò ngọc rồng Namếc</td>
+            <td>2295</td>
+        </tr>
+        <tr>
+            <td>Gói 10 viên Capsule</td>
+            <td>Tàu Vận Chuyển</td>
+            <td>1087</td>
+        </tr>
+        <tr>
+            <td>Gói 30 đậu thần cấp 1</td>
+            <td>Gói 30 đậu thần cấp 1</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Gói 30 đậu thần cấp 2</td>
+            <td>Gói 30 đậu thần cấp 2</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Gói 30 đậu thần cấp 3</td>
+            <td>Gói 30 đậu thần cấp 3</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Gói 30 đậu thần cấp 4</td>
+            <td>Gói 30 đậu thần cấp 4</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Gói 30 đậu thần cấp 5</td>
+            <td>Gói 30 đậu thần cấp 5</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Gói 30 đậu thần cấp 6</td>
+            <td>Gói 30 đậu thần cấp 6</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Gói 30 đậu thần cấp 7</td>
+            <td>Gói 30 đậu thần cấp 7</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Gói 30 đậu thần cấp 8</td>
+            <td>Gói 30 đậu thần cấp 8</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Gói 30 đậu thần cấp 9</td>
+            <td>Gói 30 đậu thần cấp 9</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Hamburger sâu</td>
+            <td>Vật phẩm sự kiện. Ăn vào +10% sức đánh trong vòng 30 phút.</td>
+            <td>8247</td>
+        </tr>
+        <tr>
+            <td>Hào quang Goku</td>
+            <td>Hào quang VIP</td>
+            <td>10738</td>
+        </tr>
+        <tr>
+            <td>Hào quang Gold</td>
+            <td>Hào quang Gold</td>
+            <td>14519</td>
+        </tr>
+        <tr>
+            <td>Hào quang Jiren</td>
+            <td>Hào quang VIP</td>
+            <td>10761</td>
+        </tr>
+        <tr>
+            <td>Hào quang VIP</td>
+            <td>VIP</td>
+            <td>12511</td>
+        </tr>
+        <tr>
+            <td>Haunter</td>
+            <td>Pokemon</td>
+            <td>14003</td>
+        </tr>
+        <tr>
+            <td>Hearts Gold</td>
+            <td>Cải trang thành Hearts Gold</td>
+            <td>14487</td>
+        </tr>
+        <tr>
+            <td>Hoa đăng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9850</td>
+        </tr>
+        <tr>
+            <td>Hoa đăng có lời chúc</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9851</td>
+        </tr>
+        <tr>
+            <td>Hóa khỉ khổng lồ lv1</td>
+            <td>học kỹ năng hóa thành khỉ khổng lồ</td>
+            <td>718</td>
+        </tr>
+        <tr>
+            <td>Hóa khỉ khổng lồ lv2</td>
+            <td>nâng hóa khỉ khổng lồ lên cấp 2</td>
+            <td>718</td>
+        </tr>
+        <tr>
+            <td>Hóa khỉ khổng lồ lv3</td>
+            <td>nâng hóa khỉ khổng lồ lên cấp 3</td>
+            <td>718</td>
+        </tr>
+        <tr>
+            <td>Hóa khỉ khổng lồ lv4</td>
+            <td>nâng hóa khỉ khổng lồ lên cấp 4</td>
+            <td>718</td>
+        </tr>
+        <tr>
+            <td>Hóa khỉ khổng lồ lv5</td>
+            <td>nâng hóa khỉ khổng lồ lên cấp 5</td>
+            <td>718</td>
+        </tr>
+        <tr>
+            <td>Hóa khỉ khổng lồ lv6</td>
+            <td>nâng hóa khỉ khổng lồ lên cấp 6</td>
+            <td>718</td>
+        </tr>
+        <tr>
+            <td>Hóa khỉ khổng lồ lv7</td>
+            <td>nâng hóa khỉ khổng lồ lên cấp 7</td>
+            <td>718</td>
+        </tr>
+        <tr>
+            <td>Hóa thạch Ngọc Rồng</td>
+            <td>Hóa thạch Ngọc Rồng</td>
+            <td>2288</td>
+        </tr>
+        <tr>
+            <td>Hổ lỏ</td>
+            <td>Hổ lỏ</td>
+            <td>12450</td>
+        </tr>
+        <tr>
+            <td>Hổ mặp trắng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8776</td>
+        </tr>
+        <tr>
+            <td>Hổ mặp vàng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8768</td>
+        </tr>
+        <tr>
+            <td>Hổ mặp xanh</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8784</td>
+        </tr>
+        <tr>
+            <td>Hồn Berus</td>
+            <td>Sửa dụng để có đệ tử Berus</td>
+            <td>7356</td>
+        </tr>
+        <tr>
+            <td>Hồn Linh Thú</td>
+            <td>Tới gặp Bulma để được hỗ trợ</td>
+            <td>15075</td>
+        </tr>
+        <tr>
+            <td>Hồn ma Ca đíc</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7354</td>
+        </tr>
+        <tr>
+            <td>Hồn ma Goku</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7353</td>
+        </tr>
+        <tr>
+            <td>Hồn ma Pôcôlô</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7355</td>
+        </tr>
+        <tr>
+            <td>Hồng Bao Vàng</td>
+            <td>Dùng nhận 2 tỷ vàng</td>
+            <td>15536</td>
+        </tr>
+        <tr>
+            <td>Hồng ngọc</td>
+            <td></td>
+            <td>7743</td>
+        </tr>
+        <tr>
+            <td>Hộp bánh Trung Thu</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4126</td>
+        </tr>
+        <tr>
+            <td>Hộp Capsule</td>
+            <td>Vật phẩm nhiệm vụ</td>
+            <td>7222</td>
+        </tr>
+        <tr>
+            <td>Hộp đồ hủy diệt Namec</td>
+            <td>Nhận đồ hủy diệt Namec</td>
+            <td>6123</td>
+        </tr>
+        <tr>
+            <td>Hộp đồ hủy diệt trái đất</td>
+            <td>Nhận đồ hủy diệt trái đất</td>
+            <td>6123</td>
+        </tr>
+        <tr>
+            <td>Hộp đồ hủy diệt Xayda</td>
+            <td>Nhận đồ hủy diệt Xayda</td>
+            <td>6123</td>
+        </tr>
+        <tr>
+            <td>Hộp đồ thiên sứ</td>
+            <td>hdsd mở ra bị ban nick ngay</td>
+            <td>10892</td>
+        </tr>
+        <tr>
+            <td>Hộp Pháp Sư</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>16008</td>
+        </tr>
+        <tr>
+            <td>Hộp Pháp Sư Cao Cấp</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>15539</td>
+        </tr>
+        <tr>
+            <td>Hộp quà 20/11</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6983</td>
+        </tr>
+        <tr>
+            <td>Hộp quà giáng sinh</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6123</td>
+        </tr>
+        <tr>
+            <td>Hộp quà Noel</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>15049</td>
+        </tr>
+        <tr>
+            <td>Hộp quà tết</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>2987</td>
+        </tr>
+        <tr>
+            <td>Hộp quà tết</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>2987</td>
+        </tr>
+        <tr>
+            <td>Hộp quà Tết 2019</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>2987</td>
+        </tr>
+        <tr>
+            <td>Hộp SKH Namec</td>
+            <td>Nhận trang bị kích hoạt</td>
+            <td>2987</td>
+        </tr>
+        <tr>
+            <td>Hộp SKH Trái Đất</td>
+            <td>Nhận trang bị kích hoạt</td>
+            <td>2987</td>
+        </tr>
+        <tr>
+            <td>Hộp SKH Xayda</td>
+            <td>Nhận trang bị kích hoạt</td>
+            <td>2987</td>
+        </tr>
+        <tr>
+            <td>HP +400K</td>
+            <td></td>
+            <td>2755</td>
+        </tr>
+        <tr>
+            <td>Huy chương bạc</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9398</td>
+        </tr>
+        <tr>
+            <td>Huy chương đồng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9397</td>
+        </tr>
+        <tr>
+            <td>Huy chương vàng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9399</td>
+        </tr>
+        <tr>
+            <td>Huyết Ảnh</td>
+            <td>Pet chiến cơ</td>
+            <td>15456</td>
+        </tr>
+        <tr>
+            <td>Inosuke</td>
+            <td>Cải trang sự kiện</td>
+            <td>10342</td>
+        </tr>
+        <tr>
+            <td>Inosuke Hashibira</td>
+            <td>Cải trang sự kiện</td>
+            <td>10247</td>
+        </tr>
+        <tr>
+            <td>Kaioken lv1</td>
+            <td>học kỹ năng Kaioken</td>
+            <td>716</td>
+        </tr>
+        <tr>
+            <td>Kaioken lv2</td>
+            <td>nâng Kaioken lên cấp 2</td>
+            <td>716</td>
+        </tr>
+        <tr>
+            <td>Kaioken lv3</td>
+            <td>nâng Kaioken lên cấp 3</td>
+            <td>716</td>
+        </tr>
+        <tr>
+            <td>Kaioken lv4</td>
+            <td>nâng Kaioken lên cấp 4</td>
+            <td>716</td>
+        </tr>
+        <tr>
+            <td>Kaioken lv5</td>
+            <td>nâng Kaioken lên cấp 5</td>
+            <td>716</td>
+        </tr>
+        <tr>
+            <td>Kaioken lv6</td>
+            <td>nâng Kaioken lên cấp 6</td>
+            <td>716</td>
+        </tr>
+        <tr>
+            <td>Kaioken lv7</td>
+            <td>nâng Kaioken lên cấp 7</td>
+            <td>716</td>
+        </tr>
+        <tr>
+            <td>Karin Kid</td>
+            <td>Cải trang Karin Kid</td>
+            <td>6852</td>
+        </tr>
+        <tr>
+            <td>Kem dâu</td>
+            <td>Thu thập đủ 99 đến gặp Bill tại hành tinh Kaio</td>
+            <td>6326</td>
+        </tr>
+        <tr>
+            <td>Kẹo bàn tay</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8245</td>
+        </tr>
+        <tr>
+            <td>Kẹo giáng sinh</td>
+            <td>Vật phẩm giáng sinh</td>
+            <td>4432</td>
+        </tr>
+        <tr>
+            <td>Kẹo một mắt</td>
+            <td>Vật phẩm sự kiện. Ăn vào +5% chí mạng trong vòng 30 phút.</td>
+            <td>8243</td>
+        </tr>
+        <tr>
+            <td>Khăn đỏ</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1072</td>
+        </tr>
+        <tr>
+            <td>Khăn hồng</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1068</td>
+        </tr>
+        <tr>
+            <td>Khăn nâu</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1067</td>
+        </tr>
+        <tr>
+            <td>Khăn tím</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1066</td>
+        </tr>
+        <tr>
+            <td>Khăn vàng</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1065</td>
+        </tr>
+        <tr>
+            <td>Khăn xám</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1070</td>
+        </tr>
+        <tr>
+            <td>Khăn xanh dạ</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1069</td>
+        </tr>
+        <tr>
+            <td>Khăn xanh dương</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1064</td>
+        </tr>
+        <tr>
+            <td>Khăn xanh lá</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1063</td>
+        </tr>
+        <tr>
+            <td>Khẩu trang</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7149</td>
+        </tr>
+        <tr>
+            <td>Khỉ Ultra</td>
+            <td>Khỉ Ultra</td>
+            <td>11040</td>
+        </tr>
+        <tr>
+            <td>Khiên năng lượng lv1</td>
+            <td>học kĩ năng khiên năng lượng</td>
+            <td>3784</td>
+        </tr>
+        <tr>
+            <td>Khiên năng lượng lv2</td>
+            <td>nâng khiên năng lượng lên cấp 2</td>
+            <td>3784</td>
+        </tr>
+        <tr>
+            <td>Khiên năng lượng lv3</td>
+            <td>nâng khiên năng lượng lên cấp 3</td>
+            <td>3784</td>
+        </tr>
+        <tr>
+            <td>Khiên năng lượng lv4</td>
+            <td>nâng khiên năng lượng lên cấp 4</td>
+            <td>3784</td>
+        </tr>
+        <tr>
+            <td>Khiên năng lượng lv5</td>
+            <td>nâng khiên năng lượng lên cấp 5</td>
+            <td>3784</td>
+        </tr>
+        <tr>
+            <td>Khiên năng lượng lv6</td>
+            <td>nâng khiên năng lượng lên cấp 6</td>
+            <td>3784</td>
+        </tr>
+        <tr>
+            <td>Khiên năng lượng lv7</td>
+            <td>nâng khiên năng lượng lên cấp 7</td>
+            <td>3784</td>
+        </tr>
+        <tr>
+            <td>Khung tre</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9845</td>
+        </tr>
+        <tr>
+            <td>KI +400K</td>
+            <td></td>
+            <td>2756</td>
+        </tr>
+        <tr>
+            <td>Kì Lân</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7077</td>
+        </tr>
+        <tr>
+            <td>Kiếm ánh sáng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9649</td>
+        </tr>
+        <tr>
+            <td>Kiếm Ánh Sáng</td>
+            <td>Cánh đeo tăng chỉ số</td>
+            <td>15366</td>
+        </tr>
+        <tr>
+            <td>Kiếm Thanos</td>
+            <td>Cánh đeo tăng chỉ số</td>
+            <td>11554</td>
+        </tr>
+        <tr>
+            <td>Kiếm vàng lấp lánh</td>
+            <td>Đeo vô kiếm thần vàng</td>
+            <td>12512</td>
+        </tr>
+        <tr>
+            <td>kiếm vip</td>
+            <td>trang bị vip</td>
+            <td>14003</td>
+        </tr>
+        <tr>
+            <td>Kiếm Z</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7842</td>
+        </tr>
+        <tr>
+            <td>Kimkan</td>
+            <td>Thú cưng</td>
+            <td>15058</td>
+        </tr>
+        <tr>
+            <td>King Kong Sành điệu</td>
+            <td>Cải trang mùa hè</td>
+            <td>12401</td>
+        </tr>
+        <tr>
+            <td>Kính Chiếu Yêu</td>
+            <td>Vật phẩm chứng nhận đánh bại Boss</td>
+            <td>16009</td>
+        </tr>
+        <tr>
+            <td>Lá dong</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7071</td>
+        </tr>
+        <tr>
+            <td>Lệnh Bài Thông Hành</td>
+            <td>Lệnh Bài dùng để Hộ Tống Đường Tăng tại thành phố Phía Đông ( Tương Lai )</td>
+            <td>15538</td>
+        </tr>
+        <tr>
+            <td>Lính bảo vệ tam giác</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8446</td>
+        </tr>
+        <tr>
+            <td>Lính bảo vệ tròn</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8444</td>
+        </tr>
+        <tr>
+            <td>Lính bảo vệ vuông</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8445</td>
+        </tr>
+        <tr>
+            <td>Linh hồn giáng sinh</td>
+            <td>Thú cưng</td>
+            <td>15070</td>
+        </tr>
+        <tr>
+            <td>Linh Thú Lửa</td>
+            <td>Linh Thú</td>
+            <td>15313</td>
+        </tr>
+        <tr>
+            <td>Linh Thú Lửa</td>
+            <td>Linh Thú</td>
+            <td>15245</td>
+        </tr>
+        <tr>
+            <td>linh thú lửa chùa</td>
+            <td>linh thú lửa</td>
+            <td>15245</td>
+        </tr>
+        <tr>
+            <td>Lizadon</td>
+            <td>Pokemon</td>
+            <td>14005</td>
+        </tr>
+        <tr>
+            <td>Lọ nước phép</td>
+            <td>Dùng để đổi vật phẩm Cua</td>
+            <td>9838</td>
+        </tr>
+        <tr>
+            <td>Lồng đèn cá chép</td>
+            <td>Bay không tốn KI</td>
+            <td>6982</td>
+        </tr>
+        <tr>
+            <td>Lồng đèn Cá chép</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4122</td>
+        </tr>
+        <tr>
+            <td>Lồng đèn Con bướm</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7233</td>
+        </tr>
+        <tr>
+            <td>Lồng đèn Con gà</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7230</td>
+        </tr>
+        <tr>
+            <td>Lồng đèn Con tàu</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7227</td>
+        </tr>
+        <tr>
+            <td>Lồng đèn Cô Vy</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7226</td>
+        </tr>
+        <tr>
+            <td>Lồng đèn Đôrêmon</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7236</td>
+        </tr>
+        <tr>
+            <td>Lồng đèn Hội An</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4120</td>
+        </tr>
+        <tr>
+            <td>Lồng đèn Kéo Quân</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4121</td>
+        </tr>
+        <tr>
+            <td>Lồng đèn lon</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9972</td>
+        </tr>
+        <tr>
+            <td>Lồng đèn Ông Sao</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4124</td>
+        </tr>
+        <tr>
+            <td>Lồng đèn Ông trăng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4123</td>
+        </tr>
+        <tr>
+            <td>Lời chúc</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9847</td>
+        </tr>
+        <tr>
+            <td>Lửa Thần</td>
+            <td>Nguyên liệu để rèn trang bị</td>
+            <td>15540</td>
+        </tr>
+        <tr>
+            <td>Lửa Xanh</td>
+            <td>Linh Thú</td>
+            <td>15249</td>
+        </tr>
+        <tr>
+            <td>Lưỡi hái Thần Chết</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7019</td>
+        </tr>
+        <tr>
+            <td>Ma phong ba</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8185</td>
+        </tr>
+        <tr>
+            <td>Ma trơi</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7352</td>
+        </tr>
+        <tr>
+            <td>Mai rùa</td>
+            <td>Vật phẩm bang hội</td>
+            <td>1035</td>
+        </tr>
+        <tr>
+            <td>Makankosappo lv1</td>
+            <td>học kỹ năng Makankosappo</td>
+            <td>723</td>
+        </tr>
+        <tr>
+            <td>Makankosappo lv2</td>
+            <td>nâng Makankosappo lên cấp 2</td>
+            <td>723</td>
+        </tr>
+        <tr>
+            <td>Makankosappo lv3</td>
+            <td>nâng Makankosappo lên cấp 3</td>
+            <td>723</td>
+        </tr>
+        <tr>
+            <td>Makankosappo lv4</td>
+            <td>nâng Makankosappo lên cấp 4</td>
+            <td>723</td>
+        </tr>
+        <tr>
+            <td>Makankosappo lv5</td>
+            <td>nâng Makankosappo lên cấp 5</td>
+            <td>723</td>
+        </tr>
+        <tr>
+            <td>Makankosappo lv6</td>
+            <td>nâng Makankosappo lên cấp 6</td>
+            <td>723</td>
+        </tr>
+        <tr>
+            <td>Makankosappo lv7</td>
+            <td>nâng Makankosappo lên cấp 7</td>
+            <td>723</td>
+        </tr>
+        <tr>
+            <td>Mảng Găng Hoàng Kim</td>
+            <td>Dùng để Rèn Trang Bị</td>
+            <td>15552</td>
+        </tr>
+        <tr>
+            <td>Mảnh Áo Hoàng Kim</td>
+            <td>Dùng để Rèn Trang Bị</td>
+            <td>15550</td>
+        </tr>
+        <tr>
+            <td>Mảnh cải trang</td>
+            <td>Thu thập để đổi cải trang</td>
+            <td>6777</td>
+        </tr>
+        <tr>
+            <td>Mảnh đá vụn</td>
+            <td>Gặp bà Hạt Mít để sử dụng</td>
+            <td>1421</td>
+        </tr>
+        <tr>
+            <td>Mảnh Độc Nhãn</td>
+            <td>Đầu não của Red Ribbon. Bị chột một mắt. Lúc nhỏ bị mọi người chê là &#39;Thằng lùn&#39;</td>
+            <td>1568</td>
+        </tr>
+        <tr>
+            <td>Mảnh Đội trưởng Vàng</td>
+            <td>Đội trưởng Vàng là một con hổ hình <br>người chắc nịch có cơ thể được bao phủ bởi bộ lông màu vàng</td>
+            <td>8935</td>
+        </tr>
+        <tr>
+            <td>Mảnh Giày Hoàng Kim</td>
+            <td>Dùng để Rèn Trang Bị</td>
+            <td>15553</td>
+        </tr>
+        <tr>
+            <td>Mảnh giấy có chữ &#39;MA&#39;</td>
+            <td>Vật phẩm nhiệm vụ</td>
+            <td>6847</td>
+        </tr>
+        <tr>
+            <td>Mảnh hồn bông tai</td>
+            <td>Dùng để nâng cấp bông tai</td>
+            <td>8619</td>
+        </tr>
+        <tr>
+            <td>Mảnh Khủng long</td>
+            <td>Hai chi trước của Khủng long rất ngắn nên chúng không thể cầm thức ăn được</td>
+            <td>7467</td>
+        </tr>
+        <tr>
+            <td>Mảnh Khủng long mẹ</td>
+            <td>Hai chi trước của Khủng long rất ngắn nên chúng không thể cầm thức ăn được</td>
+            <td>7470</td>
+        </tr>
+        <tr>
+            <td>Mảnh Lính độc nhãn</td>
+            <td>Người ta nuôi quân lính dùng trong 1 giờ</td>
+            <td>7477</td>
+        </tr>
+        <tr>
+            <td>Mảnh Lính độc nhãn</td>
+            <td>Người ta nuôi quân lính dùng trong 1 giờ</td>
+            <td>7476</td>
+        </tr>
+        <tr>
+            <td>Mảnh Lợn lòi</td>
+            <td>Lợn lòi có sở thích mài răng nanh dưới đất</td>
+            <td>7468</td>
+        </tr>
+        <tr>
+            <td>Mảnh Lợn lòi mẹ</td>
+            <td>Lợn lòi có sở thích mài răng nanh dưới đất</td>
+            <td>7471</td>
+        </tr>
+        <tr>
+            <td>Mảnh Nguyệt ấn</td>
+            <td>Dùng để hóa Ấn trang bị tại Bà hạt mít</td>
+            <td>12146</td>
+        </tr>
+        <tr>
+            <td>Mảnh Nhẫn Hoàng Kim</td>
+            <td>Dùng để Rèn Trang Bị</td>
+            <td>15554</td>
+        </tr>
+        <tr>
+            <td>Mảnh Nhật ấn</td>
+            <td>Dùng để hóa Ấn trang bị tại Bà hạt mít</td>
+            <td>12147</td>
+        </tr>
+        <tr>
+            <td>Mảnh Ninja Áo Tím</td>
+            <td>Ninja với nhiều tài năng để trở thành sát thủ</td>
+            <td>7481</td>
+        </tr>
+        <tr>
+            <td>Mảnh Phi long</td>
+            <td>Dùng tốc độ cực nhanh để tiếp cận và hạ gục mục tiêu</td>
+            <td>7474</td>
+        </tr>
+        <tr>
+            <td>Mảnh Quần Hoàng Kim</td>
+            <td>Dùng để Rèn Trang Bị</td>
+            <td>15551</td>
+        </tr>
+        <tr>
+            <td>Mảnh Quỷ bay</td>
+            <td>Sở trường tấn công chớp choáng kẻ thù</td>
+            <td>7475</td>
+        </tr>
+        <tr>
+            <td>Mảnh Quỷ đất</td>
+            <td>Bản tính của Qủy đất khá nhút nhát</td>
+            <td>7469</td>
+        </tr>
+        <tr>
+            <td>Mảnh Quỷ đất mẹ</td>
+            <td>Bản tính của Qủy đất khá nhút nhát</td>
+            <td>7472</td>
+        </tr>
+        <tr>
+            <td>Mảnh Sói xám</td>
+            <td>Được lính độc nhãn thuần hóa và cho giữ nhà như cún con</td>
+            <td>7478</td>
+        </tr>
+        <tr>
+            <td>Mảnh Thằn lằn bay</td>
+            <td>Thằn lằn bay dùng cái mỏ dài và cứng để tấn công kẻ thù</td>
+            <td>7473</td>
+        </tr>
+        <tr>
+            <td>Mảnh Thiên Sứ(Áo)</td>
+            <td>Nguyên liệu nâng cấp đồ thiên sứ</td>
+            <td>10197</td>
+        </tr>
+        <tr>
+            <td>Mảnh Thiên Sứ(Găng)</td>
+            <td>Nguyên liệu nâng cấp đồ thiên sứ</td>
+            <td>10200</td>
+        </tr>
+        <tr>
+            <td>Mảnh Thiên Sứ(Giày)</td>
+            <td>Nguyên liệu nâng cấp đồ thiên sứ</td>
+            <td>10199</td>
+        </tr>
+        <tr>
+            <td>Mảnh Thiên Sứ(Nhẫn)</td>
+            <td>Nguyên liệu nâng cấp đồ thiên sứ</td>
+            <td>10201</td>
+        </tr>
+        <tr>
+            <td>Mảnh Thiên Sứ(Quần)</td>
+            <td>Nguyên liệu nâng cấp đồ thiên sứ</td>
+            <td>10198</td>
+        </tr>
+        <tr>
+            <td>Mảnh Tinh ấn</td>
+            <td>Dùng để hóa Ấn trang bị tại Bà hạt mít</td>
+            <td>12145</td>
+        </tr>
+        <tr>
+            <td>Mảnh Trung úy Trắng</td>
+            <td>Thân hình hơi béo so với tiêu chuẩn chung</td>
+            <td>7480</td>
+        </tr>
+        <tr>
+            <td>Mảnh Trung úy Xanh Lơ</td>
+            <td>Có siêu năng lực thôi miên nhưng cực kỳ sợ chuột</td>
+            <td>7479</td>
+        </tr>
+        <tr>
+            <td>Mảnh vỡ bông tai</td>
+            <td>Dùng để nâng cấp bông tai</td>
+            <td>8618</td>
+        </tr>
+        <tr>
+            <td>Máy dò Capsule kì bí</td>
+            <td>Dùng để tìm kiếm Capsule kì bí ở tương lai</td>
+            <td>2758</td>
+        </tr>
+        <tr>
+            <td>Máy dò SKH</td>
+            <td>Sử dụng trong 30 phút up quái rơi rương mở ra SKH</td>
+            <td>6464</td>
+        </tr>
+        <tr>
+            <td>Mây Ngũ Sắc</td>
+            <td>Vật phẩm đổi Hộp Sét Kích Hoạt</td>
+            <td>6980</td>
+        </tr>
+        <tr>
+            <td>Mega Charizard X</td>
+            <td>Pokemon</td>
+            <td>14013</td>
+        </tr>
+        <tr>
+            <td>Mèo Black</td>
+            <td>Pet</td>
+            <td>10877</td>
+        </tr>
+        <tr>
+            <td>Mèo Kid Lân</td>
+            <td>Cải trang Mèo Kid Lân</td>
+            <td>11008</td>
+        </tr>
+        <tr>
+            <td>Mèo mun</td>
+            <td>Giúp tăng chỉ số bản thân</td>
+            <td>9624</td>
+        </tr>
+        <tr>
+            <td>Mèo White</td>
+            <td>Pet</td>
+            <td>13606</td>
+        </tr>
+        <tr>
+            <td>Mì ly</td>
+            <td>Thu thập đủ 99 đến gặp Bill tại hành tinh Kaio</td>
+            <td>6327</td>
+        </tr>
+        <tr>
+            <td>Mở rộng hành trang</td>
+            <td>Thêm 1 ô trong hành trang</td>
+            <td>4340</td>
+        </tr>
+        <tr>
+            <td>Mở rộng rương đồ</td>
+            <td>Thêm 1 ô trong rương</td>
+            <td>265</td>
+        </tr>
+        <tr>
+            <td>Mở rộng túi vàng</td>
+            <td>Thêm 100 triệu sức chứa vàng</td>
+            <td>9432</td>
+        </tr>
+        <tr>
+            <td>Nâng cấp kỹ năng 1 đệ tử</td>
+            <td>Nâng chiêu 1 của đệ tử lên 1 cấp</td>
+            <td>7098</td>
+        </tr>
+        <tr>
+            <td>Nâng cấp kỹ năng 2 đệ tử</td>
+            <td>Nâng chiêu 2 của đệ tử lên 1 cấp</td>
+            <td>7099</td>
+        </tr>
+        <tr>
+            <td>Nâng cấp kỹ năng 3 đệ tử</td>
+            <td>Nâng chiêu 3 của đệ tử lên 1 cấp</td>
+            <td>7100</td>
+        </tr>
+        <tr>
+            <td>Nâng cấp kỹ năng 4 đệ tử</td>
+            <td>Nâng chiêu 4 của đệ tử lên 1 cấp</td>
+            <td>7101</td>
+        </tr>
+        <tr>
+            <td>Nezuko</td>
+            <td>Cải trang sự kiện</td>
+            <td>10311</td>
+        </tr>
+        <tr>
+            <td>Nến</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9848</td>
+        </tr>
+        <tr>
+            <td>Ngọc</td>
+            <td></td>
+            <td>932</td>
+        </tr>
+        <tr>
+            <td>Ngọc Bội - Hoàng Kim</td>
+            <td>Sử dụng tăng chỉ số sức mạnh</td>
+            <td>15530</td>
+        </tr>
+        <tr>
+            <td>Ngọc Bội Huyết Nguyệt</td>
+            <td>Sử dụng tăng chỉ số sức mạnh</td>
+            <td>15534</td>
+        </tr>
+        <tr>
+            <td>Ngọc Bội Nguyên Tố - Hỏa</td>
+            <td>Sử dụng tăng chỉ số sức mạnh</td>
+            <td>15531</td>
+        </tr>
+        <tr>
+            <td>Ngọc Bội Nguyên Tố - Kim</td>
+            <td>Sử dụng tăng chỉ số sức mạnh</td>
+            <td>15532</td>
+        </tr>
+        <tr>
+            <td>Ngọc Bội Nguyên Tố - Mộc</td>
+            <td>Sử dụng tăng chỉ số sức mạnh</td>
+            <td>15533</td>
+        </tr>
+        <tr>
+            <td>Ngọc Bội Nguyên Tố - Thủy</td>
+            <td>Sử dụng tăng chỉ số sức mạnh</td>
+            <td>15535</td>
+        </tr>
+        <tr>
+            <td>Ngọc đen 1 sao</td>
+            <td>Thu thập để ước Rồng Xương (tự động xóa khi kết thúc sự kiện)</td>
+            <td>7337</td>
+        </tr>
+        <tr>
+            <td>Ngọc đen 2 sao</td>
+            <td>Thu thập để ước Rồng Xương (tự động xóa khi kết thúc sự kiện)</td>
+            <td>7338</td>
+        </tr>
+        <tr>
+            <td>Ngọc đen 3 sao</td>
+            <td>Thu thập để ước Rồng Xương (tự động xóa khi kết thúc sự kiện)</td>
+            <td>7339</td>
+        </tr>
+        <tr>
+            <td>Ngọc đen 4 sao</td>
+            <td>Thu thập để ước Rồng Xương (tự động xóa khi kết thúc sự kiện)</td>
+            <td>7340</td>
+        </tr>
+        <tr>
+            <td>Ngọc đen 5 sao</td>
+            <td>Thu thập để ước Rồng Xương (tự động xóa khi kết thúc sự kiện)</td>
+            <td>7341</td>
+        </tr>
+        <tr>
+            <td>Ngọc đen 6 sao</td>
+            <td>Thu thập để ước Rồng Xương (tự động xóa khi kết thúc sự kiện)</td>
+            <td>7342</td>
+        </tr>
+        <tr>
+            <td>Ngọc đen 7 sao</td>
+            <td>Thu thập để ước Rồng Xương (tự động xóa khi kết thúc sự kiện)</td>
+            <td>7343</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng 1 sao</td>
+            <td>Thu thập để ước rồng thần</td>
+            <td>419</td>
+        </tr>
+        <tr>
+            <td>Ngọc rồng 1 sao đen</td>
+            <td>+15% sức đánh cho toàn bang</td>
+            <td>2315</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng 1 sao VIP</td>
+            <td>Ép sao pha lê +2% Chí mạng</td>
+            <td>14287</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng 2 sao</td>
+            <td>Thu thập để ước rồng thần</td>
+            <td>420</td>
+        </tr>
+        <tr>
+            <td>Ngọc rồng 2 sao đen</td>
+            <td>+20% HP và KI tối đa cho toàn bang</td>
+            <td>2316</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng 2 sao VIP</td>
+            <td>Ép sao pha lê</td>
+            <td>14288</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng 3 sao</td>
+            <td>Thu thập để ước rồng thần</td>
+            <td>421</td>
+        </tr>
+        <tr>
+            <td>Ngọc rồng 3 sao đen</td>
+            <td>Mỗi giờ 10 hạt đậu thần cấp 8 cho toàn bang</td>
+            <td>2317</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng 3 sao VIP</td>
+            <td>Ép sao pha lê +6% Sức đánh</td>
+            <td>14289</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng 4 sao</td>
+            <td>Thu thập để ước rồng thần</td>
+            <td>422</td>
+        </tr>
+        <tr>
+            <td>Ngọc rồng 4 sao đen</td>
+            <td>Mỗi giờ 1 bùa 1h ngẫu nhiên cho toàn bang</td>
+            <td>2318</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng 4 sao VIP</td>
+            <td>Ép sao pha lê</td>
+            <td>14290</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng 5 sao</td>
+            <td>Thu thập để ước rồng thần</td>
+            <td>423</td>
+        </tr>
+        <tr>
+            <td>Ngọc rồng 5 sao đen</td>
+            <td>Mỗi giờ 3 ngọc nâng cấp ngẫu nhiên cho toàn bang</td>
+            <td>2319</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng 5 sao VIP</td>
+            <td>Ép sao pha lê</td>
+            <td>14291</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng 6 sao</td>
+            <td>Thu thập để ước rồng thần</td>
+            <td>424</td>
+        </tr>
+        <tr>
+            <td>Ngọc rồng 6 sao đen</td>
+            <td>Mỗi giờ 200.000 vàng cho toàn bang</td>
+            <td>2320</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng 6 sao VIP</td>
+            <td>Ép sao pha lê +10% KI</td>
+            <td>14292</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng 7 sao</td>
+            <td>Thu thập để ước rồng thần</td>
+            <td>425</td>
+        </tr>
+        <tr>
+            <td>Ngọc rồng 7 sao đen</td>
+            <td>Mỗi giờ 2 ngọc cho toàn bang</td>
+            <td>2321</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng 7 sao VIP</td>
+            <td>Ép sao pha lê +10% HP</td>
+            <td>14293</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Băng 1 Sao</td>
+            <td>Thu thập để ước Rồng Băng</td>
+            <td>8579</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Băng 2 Sao</td>
+            <td>Thu thập để ước Rồng Băng</td>
+            <td>8580</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Băng 3 Sao</td>
+            <td>Thu thập để ước Rồng Băng</td>
+            <td>8581</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Băng 4 Sao</td>
+            <td>Thu thập để ước Rồng Băng</td>
+            <td>8582</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Băng 5 Sao</td>
+            <td>Thu thập để ước Rồng Băng</td>
+            <td>8583</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Băng 6 Sao</td>
+            <td>Thu thập để ước Rồng Băng</td>
+            <td>8584</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Băng 7 Sao</td>
+            <td>Thu thập để ước Rồng Băng</td>
+            <td>8585</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Namek</td>
+            <td>Tập họp đủ 7 viên để ước</td>
+            <td>2287</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Namek 1 Sao</td>
+            <td>Tập họp đủ 7 viên để ước</td>
+            <td>2280</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Namek 2 Sao</td>
+            <td>Tập họp đủ 7 viên để ước</td>
+            <td>2281</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Namek 3 Sao</td>
+            <td>Tập họp đủ 7 viên để ước</td>
+            <td>2282</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Namek 4 Sao</td>
+            <td>Tập họp đủ 7 viên để ước</td>
+            <td>2283</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Namek 5 Sao</td>
+            <td>Tập họp đủ 7 viên để ước</td>
+            <td>2284</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Namek 6 Sao</td>
+            <td>Tập họp đủ 7 viên để ước</td>
+            <td>2285</td>
+        </tr>
+        <tr>
+            <td>Ngọc Rồng Namek 7 Sao</td>
+            <td>Tập họp đủ 7 viên để ước</td>
+            <td>2286</td>
+        </tr>
+        <tr>
+            <td>Ngọc rồng Siêu Cấp</td>
+            <td>Thu thập để ước rồng thần</td>
+            <td>9650</td>
+        </tr>
+        <tr>
+            <td>Ngọc Thố</td>
+            <td>Bay không tốn KI</td>
+            <td>6981</td>
+        </tr>
+        <tr>
+            <td>Nguyệt Ảnh</td>
+            <td>Pet chiến cơ</td>
+            <td>15444</td>
+        </tr>
+        <tr>
+            <td>Nguyệt nha sản</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9707</td>
+        </tr>
+        <tr>
+            <td>Ngựa</td>
+            <td>Pet giỗ tổ</td>
+            <td>12317</td>
+        </tr>
+        <tr>
+            <td>Nhẫn Hắc Ám</td>
+            <td>Dùng Tới Chỗ Siêu Anh Hùng &amp; Siêu Nhân</td>
+            <td>15558</td>
+        </tr>
+        <tr>
+            <td>Nhẫn Hủy Diệt</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>6323</td>
+        </tr>
+        <tr>
+            <td>Nhẫn Thần Linh</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>6314</td>
+        </tr>
+        <tr>
+            <td>Nhẫn Thiên Sứ</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>10189</td>
+        </tr>
+        <tr>
+            <td>Nhẫn Thiên Sứ</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>10179</td>
+        </tr>
+        <tr>
+            <td>Nhẫn Thiên Sứ</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>10169</td>
+        </tr>
+        <tr>
+            <td>Nhẫn thời không sai lệch</td>
+            <td>Vật phẩm nhiệm vụ</td>
+            <td>9067</td>
+        </tr>
+        <tr>
+            <td>Nhân vật bí ẩn</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>2760</td>
+        </tr>
+        <tr>
+            <td>Nho tím</td>
+            <td>Ăn vào hồi phục 100% thể lực</td>
+            <td>1394</td>
+        </tr>
+        <tr>
+            <td>Nho xanh</td>
+            <td>Ăn vào hồi phục 20% thể lực</td>
+            <td>1395</td>
+        </tr>
+        <tr>
+            <td>Nón Chuột may mắn</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7091</td>
+        </tr>
+        <tr>
+            <td>Nón Chuột may mắn</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7088</td>
+        </tr>
+        <tr>
+            <td>Nón Chuột may mắn</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7085</td>
+        </tr>
+        <tr>
+            <td>Nón Hổ trắng</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>8818</td>
+        </tr>
+        <tr>
+            <td>Nón Hổ vàng</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>8758</td>
+        </tr>
+        <tr>
+            <td>Nón Hổ xanh</td>
+            <td>Dùng để thay đổi khuôn mặt</td>
+            <td>8824</td>
+        </tr>
+        <tr>
+            <td>Nón Noel Đỏ</td>
+            <td>Vật phẩm giáng sinh</td>
+            <td>2786</td>
+        </tr>
+        <tr>
+            <td>Nón Noel Đỏ</td>
+            <td>Vật phẩm giáng sinh</td>
+            <td>2783</td>
+        </tr>
+        <tr>
+            <td>Nón Noel Đỏ</td>
+            <td>Vật phẩm giáng sinh</td>
+            <td>2780</td>
+        </tr>
+        <tr>
+            <td>Nón Noel Xám</td>
+            <td>Vật phẩm giáng sinh</td>
+            <td>2788</td>
+        </tr>
+        <tr>
+            <td>Nón Noel Xám</td>
+            <td>Vật phẩm giáng sinh</td>
+            <td>2785</td>
+        </tr>
+        <tr>
+            <td>Nón Noel Xám</td>
+            <td>Vật phẩm giáng sinh</td>
+            <td>2782</td>
+        </tr>
+        <tr>
+            <td>Nón Noel Xanh</td>
+            <td>Vật phẩm giáng sinh</td>
+            <td>2787</td>
+        </tr>
+        <tr>
+            <td>Nón Noel Xanh</td>
+            <td>Vật phẩm giáng sinh</td>
+            <td>2781</td>
+        </tr>
+        <tr>
+            <td>Nón Noel Xanh</td>
+            <td>Vật phẩm giáng sinh</td>
+            <td>2766</td>
+        </tr>
+        <tr>
+            <td>Nón thiên thần</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7334</td>
+        </tr>
+        <tr>
+            <td>Nón Trâu may mắn</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7589</td>
+        </tr>
+        <tr>
+            <td>Nón Trâu may mắn</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7587</td>
+        </tr>
+        <tr>
+            <td>Nón Trâu may mắn</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7585</td>
+        </tr>
+        <tr>
+            <td>Pan Siêu nhân</td>
+            <td>Cải trang Siêu nhân</td>
+            <td>9458</td>
+        </tr>
+        <tr>
+            <td>PET Captain America</td>
+            <td>PET Marvel</td>
+            <td>11456</td>
+        </tr>
+        <tr>
+            <td>Pet Cua pàng Đế</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9621</td>
+        </tr>
+        <tr>
+            <td>PET Hulk</td>
+            <td>PET Marvel</td>
+            <td>11361</td>
+        </tr>
+        <tr>
+            <td>Pet Khỉ Bong Bóng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9978</td>
+        </tr>
+        <tr>
+            <td>PET Spider Man</td>
+            <td>PET Marvel</td>
+            <td>11488</td>
+        </tr>
+        <tr>
+            <td>Pet Thỏ mập</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9974</td>
+        </tr>
+        <tr>
+            <td>Pet Thỏ ốm</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9973</td>
+        </tr>
+        <tr>
+            <td>Pet Trâu Đen</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7487</td>
+        </tr>
+        <tr>
+            <td>Pháo bông</td>
+            <td>Vật phẩm sự kiện năm mới</td>
+            <td>4548</td>
+        </tr>
+        <tr>
+            <td>Pháo hoa</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9849</td>
+        </tr>
+        <tr>
+            <td>Pháo Thăng Thiên</td>
+            <td>Bay không tốn KI</td>
+            <td>4548</td>
+        </tr>
+        <tr>
+            <td>Phi Long</td>
+            <td>Bay không tốn KI</td>
+            <td>2277</td>
+        </tr>
+        <tr>
+            <td>Phi Long VIP</td>
+            <td>Bay phục hồi KI</td>
+            <td>2278</td>
+        </tr>
+        <tr>
+            <td>Phiếu Đổi Đá Điêu Khắc</td>
+            <td>Dùng để đổi Đá Khắc Chỉ Số</td>
+            <td>15542</td>
+        </tr>
+        <tr>
+            <td>Phiếu giảm giá</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4030</td>
+        </tr>
+        <tr>
+            <td>Phiếu giảm giá VIP</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4030</td>
+        </tr>
+        <tr>
+            <td>Phóng lợn</td>
+            <td>Giúp tăng chỉ số bản thân</td>
+            <td>9630</td>
+        </tr>
+        <tr>
+            <td>Phượng hoàng</td>
+            <td>Vật phẩm dùng để bay không tốn KI</td>
+            <td>10855</td>
+        </tr>
+        <tr>
+            <td>Pic Thợ lặn 2023</td>
+            <td>Cải trang mùa hè</td>
+            <td>12335</td>
+        </tr>
+        <tr>
+            <td>Pikachu</td>
+            <td>Pokemon</td>
+            <td>14025</td>
+        </tr>
+        <tr>
+            <td>Poc Bikini 2023</td>
+            <td>Cải trang mùa hè</td>
+            <td>12369</td>
+        </tr>
+        <tr>
+            <td>Ptera Mega</td>
+            <td>Pokemon</td>
+            <td>14001</td>
+        </tr>
+        <tr>
+            <td>Quả cầu Kênh Khi lv1</td>
+            <td>học kỹ năng Quả Cầu Kênh Khi</td>
+            <td>717</td>
+        </tr>
+        <tr>
+            <td>Quả cầu Kênh Khi lv2</td>
+            <td>nâng Quả Cầu Kênh Khi lên cấp 2</td>
+            <td>717</td>
+        </tr>
+        <tr>
+            <td>Quả cầu Kênh Khi lv3</td>
+            <td>nâng Quả Cầu Kênh Khi lên cấp 3</td>
+            <td>717</td>
+        </tr>
+        <tr>
+            <td>Quả cầu Kênh Khi lv4</td>
+            <td>nâng Quả Cầu Kênh Khi lên cấp 4</td>
+            <td>717</td>
+        </tr>
+        <tr>
+            <td>Quả cầu Kênh Khi lv5</td>
+            <td>nâng Quả Cầu Kênh Khi lên cấp 5</td>
+            <td>717</td>
+        </tr>
+        <tr>
+            <td>Quả cầu Kênh Khi lv6</td>
+            <td>nâng Quả Cầu Kênh Khi lên cấp 6</td>
+            <td>717</td>
+        </tr>
+        <tr>
+            <td>Quả cầu Kênh Khi lv7</td>
+            <td>nâng Quả Cầu Kênh Khi lên cấp 7</td>
+            <td>717</td>
+        </tr>
+        <tr>
+            <td>Quà Đền Bù</td>
+            <td>Dùng nhận quà đền bù từ Admin đẹp trai</td>
+            <td>12285</td>
+        </tr>
+        <tr>
+            <td>Quả Hồng Đào</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4547</td>
+        </tr>
+        <tr>
+            <td>Quả Hồng Đào Chín</td>
+            <td>Sử dụng nhận Đệ tử Super Broly Huyền thoại</td>
+            <td>4547</td>
+        </tr>
+        <tr>
+            <td>Quả Trứng</td>
+            <td></td>
+            <td>2164</td>
+        </tr>
+        <tr>
+            <td>Quả trứng hắc ám</td>
+            <td>Bên trong có chứa sinh linh hắc ám</td>
+            <td>15071</td>
+        </tr>
+        <tr>
+            <td>Quả trứng thiên thần</td>
+            <td>Bên trong có chứa sinh linh thiên thần </td>
+            <td>15072</td>
+        </tr>
+        <tr>
+            <td>Quái Vật Băng</td>
+            <td>Linh Thú</td>
+            <td>15243</td>
+        </tr>
+        <tr>
+            <td>Quạt ba tiêu</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9816</td>
+        </tr>
+        <tr>
+            <td>Quần bạc Goku</td>
+            <td>Giúp tăng HP</td>
+            <td>1695</td>
+        </tr>
+        <tr>
+            <td>Quần bạc Zealot</td>
+            <td>Giúp tăng HP</td>
+            <td>1699</td>
+        </tr>
+        <tr>
+            <td>Quần da Calic</td>
+            <td>Giúp tăng HP</td>
+            <td>1694</td>
+        </tr>
+        <tr>
+            <td>Quần da Xayda</td>
+            <td>Giúp tăng HP</td>
+            <td>955</td>
+        </tr>
+        <tr>
+            <td>Quần đi biển</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6569</td>
+        </tr>
+        <tr>
+            <td>Quần đi biển</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6569</td>
+        </tr>
+        <tr>
+            <td>Quần đi biển</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6569</td>
+        </tr>
+        <tr>
+            <td>Quần đồng Tron</td>
+            <td>Giúp tăng HP</td>
+            <td>1698</td>
+        </tr>
+        <tr>
+            <td>Quần giáp bạc</td>
+            <td>Giúp tăng HP</td>
+            <td>935</td>
+        </tr>
+        <tr>
+            <td>Quần giáp đồng</td>
+            <td>Giúp tăng HP</td>
+            <td>399</td>
+        </tr>
+        <tr>
+            <td>Quần giáp sắt</td>
+            <td>Giúp tăng HP</td>
+            <td>399</td>
+        </tr>
+        <tr>
+            <td>Quần giáp vàng</td>
+            <td>Giúp tăng HP</td>
+            <td>935</td>
+        </tr>
+        <tr>
+            <td>Quần Hủy Diệt</td>
+            <td>Giúp tăng HP</td>
+            <td>6321</td>
+        </tr>
+        <tr>
+            <td>Quần Hủy Diệt</td>
+            <td>Giúp tăng HP</td>
+            <td>6316</td>
+        </tr>
+        <tr>
+            <td>Quần Hủy Diệt</td>
+            <td>Giúp tăng HP</td>
+            <td>6311</td>
+        </tr>
+        <tr>
+            <td>Quần jean Calic</td>
+            <td>Giúp tăng HP</td>
+            <td>1694</td>
+        </tr>
+        <tr>
+            <td>Quần Kaio</td>
+            <td>Giúp tăng HP</td>
+            <td>1697</td>
+        </tr>
+        <tr>
+            <td>Quần len cứng</td>
+            <td>Giúp tăng HP</td>
+            <td>943</td>
+        </tr>
+        <tr>
+            <td>Quần lông đỏ</td>
+            <td>Giúp tăng HP</td>
+            <td>1696</td>
+        </tr>
+        <tr>
+            <td>Quần lông Xayda</td>
+            <td>Giúp tăng HP</td>
+            <td>955</td>
+        </tr>
+        <tr>
+            <td>Quần lưỡng long</td>
+            <td>Giúp tăng HP</td>
+            <td>1697</td>
+        </tr>
+        <tr>
+            <td>Quần sắt Tron</td>
+            <td>Giúp tăng HP</td>
+            <td>1698</td>
+        </tr>
+        <tr>
+            <td>Quần siêu Xayda</td>
+            <td>Giúp tăng HP</td>
+            <td>1696</td>
+        </tr>
+        <tr>
+            <td>Quần sợi gai</td>
+            <td>Giúp tăng HP</td>
+            <td>398</td>
+        </tr>
+        <tr>
+            <td>Quần sợi len</td>
+            <td>Giúp tăng HP</td>
+            <td>398</td>
+        </tr>
+        <tr>
+            <td>Quần Thần Linh</td>
+            <td>Giúp tăng HP</td>
+            <td>4648</td>
+        </tr>
+        <tr>
+            <td>Quần Thần namếc</td>
+            <td>Giúp tăng HP</td>
+            <td>4658</td>
+        </tr>
+        <tr>
+            <td>Quần Thần Xayda</td>
+            <td>Giúp tăng HP</td>
+            <td>4654</td>
+        </tr>
+        <tr>
+            <td>Quần Thiên Sứ</td>
+            <td>Giúp tăng HP</td>
+            <td>10186</td>
+        </tr>
+        <tr>
+            <td>Quần Thiên Sứ</td>
+            <td>Giúp tăng HP</td>
+            <td>10176</td>
+        </tr>
+        <tr>
+            <td>Quần Thiên Sứ</td>
+            <td>Giúp tăng HP</td>
+            <td>10166</td>
+        </tr>
+        <tr>
+            <td>Quần thun cứng</td>
+            <td>Giúp tăng HP</td>
+            <td>943</td>
+        </tr>
+        <tr>
+            <td>Quần thun dày</td>
+            <td>Giúp tăng HP</td>
+            <td>395</td>
+        </tr>
+        <tr>
+            <td>Quần thun đen</td>
+            <td>Giúp tăng HP</td>
+            <td>396</td>
+        </tr>
+        <tr>
+            <td>Quần thun Kame</td>
+            <td>Giúp tăng HP</td>
+            <td>939</td>
+        </tr>
+        <tr>
+            <td>Quần thun Pico</td>
+            <td>Giúp tăng HP</td>
+            <td>397</td>
+        </tr>
+        <tr>
+            <td>Quần thun thô</td>
+            <td>Giúp tăng HP</td>
+            <td>400</td>
+        </tr>
+        <tr>
+            <td>Quần vải cứng Pico</td>
+            <td>Giúp tăng HP</td>
+            <td>960</td>
+        </tr>
+        <tr>
+            <td>Quần vải dày</td>
+            <td>Giúp tăng HP</td>
+            <td>395</td>
+        </tr>
+        <tr>
+            <td>Quần vải đen</td>
+            <td>Giúp tăng HP</td>
+            <td>396</td>
+        </tr>
+        <tr>
+            <td>Quần vải Kame</td>
+            <td>Giúp tăng HP</td>
+            <td>939</td>
+        </tr>
+        <tr>
+            <td>Quần vải mềm Pico</td>
+            <td>Giúp tăng HP</td>
+            <td>960</td>
+        </tr>
+        <tr>
+            <td>Quần vải thô</td>
+            <td>Giúp tăng HP</td>
+            <td>400</td>
+        </tr>
+        <tr>
+            <td>Quần vải thô Pico</td>
+            <td>Giúp tăng HP</td>
+            <td>397</td>
+        </tr>
+        <tr>
+            <td>Quần vàng Goku</td>
+            <td>Giúp tăng HP</td>
+            <td>1695</td>
+        </tr>
+        <tr>
+            <td>Quần vàng Zealot</td>
+            <td>Giúp tăng HP</td>
+            <td>1699</td>
+        </tr>
+        <tr>
+            <td>Quần võ goku</td>
+            <td>Giúp tăng HP</td>
+            <td>950</td>
+        </tr>
+        <tr>
+            <td>Quần võ Kame</td>
+            <td>Giúp tăng HP</td>
+            <td>950</td>
+        </tr>
+        <tr>
+            <td>Quỷ Chim</td>
+            <td>Dùng để bay phục hồi HP,KI</td>
+            <td>2278</td>
+        </tr>
+        <tr>
+            <td>Quyền trượng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9705</td>
+        </tr>
+        <tr>
+            <td>Rada cấp 1</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>1089</td>
+        </tr>
+        <tr>
+            <td>Rada cấp 10</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>1712</td>
+        </tr>
+        <tr>
+            <td>Rada cấp 11</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>1713</td>
+        </tr>
+        <tr>
+            <td>Rada cấp 12</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>1713</td>
+        </tr>
+        <tr>
+            <td>Rada cấp 2</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>433</td>
+        </tr>
+        <tr>
+            <td>Rada cấp 3</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>1022</td>
+        </tr>
+        <tr>
+            <td>Rada cấp 4</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>1023</td>
+        </tr>
+        <tr>
+            <td>Rada cấp 5</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>1019</td>
+        </tr>
+        <tr>
+            <td>Rada cấp 6</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>1020</td>
+        </tr>
+        <tr>
+            <td>Rada cấp 7</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>1021</td>
+        </tr>
+        <tr>
+            <td>Rada cấp 8</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>434</td>
+        </tr>
+        <tr>
+            <td>Rada cấp 9</td>
+            <td>Giúp tăng Chí Mạng</td>
+            <td>1712</td>
+        </tr>
+        <tr>
+            <td>Rađa dò ngọc Namếc</td>
+            <td>Vật phẩm nhiệm vụ</td>
+            <td>9651</td>
+        </tr>
+        <tr>
+            <td>Rayquaza</td>
+            <td>Pokemon</td>
+            <td>14009</td>
+        </tr>
+        <tr>
+            <td>Rồng Xanh</td>
+            <td>Linh Thú</td>
+            <td>15327</td>
+        </tr>
+        <tr>
+            <td>Rùa con</td>
+            <td>Mang Rùa con bị lạc về cho Quy Lão để nhận thưởng.</td>
+            <td>7861</td>
+        </tr>
+        <tr>
+            <td>Rương Bạc</td>
+            <td>Giấu bên trong nhiều vật phẩm quý giá</td>
+            <td>5006</td>
+        </tr>
+        <tr>
+            <td>Rương Gỗ</td>
+            <td>Giấu bên trong nhiều vật phẩm quý giá</td>
+            <td>265</td>
+        </tr>
+        <tr>
+            <td>Rương Tranh ngọc Namếc</td>
+            <td>Giấu bên trong nhiều vật phẩm quý giá</td>
+            <td>5007</td>
+        </tr>
+        <tr>
+            <td>Rương Vàng</td>
+            <td>Giấu bên trong nhiều vật phẩm quý giá</td>
+            <td>5007</td>
+        </tr>
+        <tr>
+            <td>Rương vàng</td>
+            <td>Mở ra để nhận ngẫu nhiên một lượng vàng</td>
+            <td>15054</td>
+        </tr>
+        <tr>
+            <td>Sách Antomic lv1</td>
+            <td>học kĩ năng Antomic</td>
+            <td>686</td>
+        </tr>
+        <tr>
+            <td>Sách Antomic lv2</td>
+            <td>nâng đòn Antomic lên cấp 2</td>
+            <td>687</td>
+        </tr>
+        <tr>
+            <td>Sách Antomic lv3</td>
+            <td>nâng Antomic lên cấp 3</td>
+            <td>688</td>
+        </tr>
+        <tr>
+            <td>Sách Antomic lv4</td>
+            <td>nâng Antomic lên cấp 4</td>
+            <td>689</td>
+        </tr>
+        <tr>
+            <td>Sách Antomic lv5</td>
+            <td>nâng Antomic lên cấp 5</td>
+            <td>690</td>
+        </tr>
+        <tr>
+            <td>Sách Antomic lv6</td>
+            <td>nâng Antomic lên cấp 6</td>
+            <td>691</td>
+        </tr>
+        <tr>
+            <td>Sách Antomic lv7</td>
+            <td>nâng Antomic lên cấp 7</td>
+            <td>692</td>
+        </tr>
+        <tr>
+            <td>Sách Biến Sôcôla lv1</td>
+            <td>học kĩ năng Biến Sôcôla</td>
+            <td>3780</td>
+        </tr>
+        <tr>
+            <td>Sách Biến Sôcôla lv2</td>
+            <td>nâng biến Sôcôla lên cấp 2</td>
+            <td>3780</td>
+        </tr>
+        <tr>
+            <td>Sách Biến Sôcôla lv3</td>
+            <td>nâng biến Sôcôla lên cấp 3</td>
+            <td>3780</td>
+        </tr>
+        <tr>
+            <td>Sách Biến Sôcôla lv4</td>
+            <td>nâng biến Sôcôla lên cấp 4</td>
+            <td>3780</td>
+        </tr>
+        <tr>
+            <td>Sách Biến Sôcôla lv5</td>
+            <td>nâng biến Sôcôla lên cấp 5</td>
+            <td>3780</td>
+        </tr>
+        <tr>
+            <td>Sách Biến Sôcôla lv6</td>
+            <td>nâng biến Sôcôla lên cấp 6</td>
+            <td>3780</td>
+        </tr>
+        <tr>
+            <td>Sách Biến Sôcôla lv7</td>
+            <td>nâng biến Sôcôla lên cấp 7</td>
+            <td>3780</td>
+        </tr>
+        <tr>
+            <td>Sách Dịch Chuyển lv1</td>
+            <td>học phép Dịch Chuyển</td>
+            <td>3783</td>
+        </tr>
+        <tr>
+            <td>Sách Dịch Chuyển lv2</td>
+            <td>nâng phép Dịch Chuyển lên cấp 2</td>
+            <td>3783</td>
+        </tr>
+        <tr>
+            <td>Sách Dịch Chuyển lv3</td>
+            <td>nâng phép Dịch Chuyển lên cấp 3</td>
+            <td>3783</td>
+        </tr>
+        <tr>
+            <td>Sách Dịch Chuyển lv4</td>
+            <td>nâng phép Dịch Chuyển lên cấp 4</td>
+            <td>3783</td>
+        </tr>
+        <tr>
+            <td>Sách Dịch Chuyển lv5</td>
+            <td>nâng phép Dịch Chuyển lên cấp 5</td>
+            <td>3783</td>
+        </tr>
+        <tr>
+            <td>Sách Dịch Chuyển lv6</td>
+            <td>nâng phép Dịch Chuyển lên cấp 6</td>
+            <td>3783</td>
+        </tr>
+        <tr>
+            <td>Sách Dịch Chuyển lv7</td>
+            <td>nâng phép Dịch Chuyển lên cấp 7</td>
+            <td>3783</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Demon lv1</td>
+            <td>học kĩ năng đấm Demon</td>
+            <td>665</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Demon lv2</td>
+            <td>nâng đòn đấm Demon lên cấp 2</td>
+            <td>666</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Demon lv3</td>
+            <td>nâng đòn đấm Demon lên cấp 3</td>
+            <td>667</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Demon lv4</td>
+            <td>nâng đòn đấm Demon lên cấp 4</td>
+            <td>668</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Demon lv5</td>
+            <td>nâng đòn đấm Demon lên cấp 5</td>
+            <td>669</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Demon lv6</td>
+            <td>nâng đòn đấm Demon lên cấp 6</td>
+            <td>670</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Demon lv7</td>
+            <td>nâng đòn đấm Demon lên cấp 7</td>
+            <td>671</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Dragon lv1</td>
+            <td>học kĩ năng đấm Dragon</td>
+            <td>644</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Dragon lv2</td>
+            <td>nâng đấm Dragon lên cấp 2</td>
+            <td>645</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Dragon lv3</td>
+            <td>nâng đấm Dragon lên cấp 3</td>
+            <td>646</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Dragon lv4</td>
+            <td>nâng đấm Dragon lên cấp 4</td>
+            <td>647</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Dragon lv5</td>
+            <td>nâng đấm Dragon lên cấp 5</td>
+            <td>648</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Dragon lv6</td>
+            <td>nâng đấm Dragon lên cấp 6</td>
+            <td>649</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Dragon lv7</td>
+            <td>nâng đấm Dragon lên cấp 7</td>
+            <td>650</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Galick lv1</td>
+            <td>học kĩ năng đấm Galick</td>
+            <td>679</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Galick lv2</td>
+            <td>nâng đòn đấm Galick lên cấp 2</td>
+            <td>680</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Galick lv3</td>
+            <td>nâng đòn đấm Galick lên cấp 3</td>
+            <td>681</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Galick lv4</td>
+            <td>nâng đòn đấm Galick lên cấp 4</td>
+            <td>682</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Galick lv5</td>
+            <td>nâng đòn đấm Galick lên cấp 5</td>
+            <td>683</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Galick lv6</td>
+            <td>nâng đòn đấm Galick lên cấp 6</td>
+            <td>684</td>
+        </tr>
+        <tr>
+            <td>Sách đấm Galick lv7</td>
+            <td>nâng đòn đấm Galick lên cấp 7</td>
+            <td>685</td>
+        </tr>
+        <tr>
+            <td>Sách học Trị thương lv1</td>
+            <td>học trị thương</td>
+            <td>1090</td>
+        </tr>
+        <tr>
+            <td>Sách học Trị thương lv2</td>
+            <td>nâng trị thương lên cấp 2</td>
+            <td>1091</td>
+        </tr>
+        <tr>
+            <td>Sách học Trị thương lv3</td>
+            <td>nâng trị thương lên cấp 3</td>
+            <td>1092</td>
+        </tr>
+        <tr>
+            <td>Sách học Trị thương lv4</td>
+            <td>nâng trị thương lên cấp 4</td>
+            <td>1093</td>
+        </tr>
+        <tr>
+            <td>Sách học Trị thương lv5</td>
+            <td>nâng trị thương lên cấp 5</td>
+            <td>1094</td>
+        </tr>
+        <tr>
+            <td>Sách học Trị thương lv6</td>
+            <td>nâng trị thương lên cấp 6</td>
+            <td>1095</td>
+        </tr>
+        <tr>
+            <td>Sách học Trị thương lv7</td>
+            <td>nâng trị thương lên cấp 7</td>
+            <td>1096</td>
+        </tr>
+        <tr>
+            <td>Sách Huýt Sáo lv1</td>
+            <td>học phép Huýt Sáo</td>
+            <td>3781</td>
+        </tr>
+        <tr>
+            <td>Sách Huýt Sáo lv2</td>
+            <td>nâng phép Huýt Sáo lên cấp 2</td>
+            <td>3781</td>
+        </tr>
+        <tr>
+            <td>Sách Huýt Sáo lv3</td>
+            <td>nâng phép Huýt Sáo lên cấp 3</td>
+            <td>3781</td>
+        </tr>
+        <tr>
+            <td>Sách Huýt Sáo lv4</td>
+            <td>nâng phép Huýt Sáo lên cấp 4</td>
+            <td>3781</td>
+        </tr>
+        <tr>
+            <td>Sách Huýt Sáo lv5</td>
+            <td>nâng phép Huýt Sáo lên cấp 5</td>
+            <td>3781</td>
+        </tr>
+        <tr>
+            <td>Sách Huýt Sáo lv6</td>
+            <td>nâng phép Huýt Sáo lên cấp 6</td>
+            <td>3781</td>
+        </tr>
+        <tr>
+            <td>Sách Huýt Sáo lv7</td>
+            <td>nâng phép Huýt Sáo lên cấp 7</td>
+            <td>3781</td>
+        </tr>
+        <tr>
+            <td>Sách Kamejoko lv1</td>
+            <td>học kĩ năng Kamejoko</td>
+            <td>651</td>
+        </tr>
+        <tr>
+            <td>Sách Kamejoko lv2</td>
+            <td>nâng đòn Kamejoko lên cấp 2</td>
+            <td>652</td>
+        </tr>
+        <tr>
+            <td>Sách Kamejoko lv3</td>
+            <td>nâng đòn Kamejoko lên cấp 3</td>
+            <td>653</td>
+        </tr>
+        <tr>
+            <td>Sách Kamejoko lv4</td>
+            <td>nâng đòn Kamejoko lên cấp 4</td>
+            <td>654</td>
+        </tr>
+        <tr>
+            <td>Sách Kamejoko lv5</td>
+            <td>nâng đòn Kamejoko lên cấp 5</td>
+            <td>655</td>
+        </tr>
+        <tr>
+            <td>Sách Kamejoko lv6</td>
+            <td>nâng đòn Kamejoko lên cấp 6</td>
+            <td>656</td>
+        </tr>
+        <tr>
+            <td>Sách Kamejoko lv7</td>
+            <td>nâng đòn Kamejoko lên cấp 7</td>
+            <td>657</td>
+        </tr>
+        <tr>
+            <td>Sách Liên hoàn lv1</td>
+            <td>học liên hoàn chiêu</td>
+            <td>3778</td>
+        </tr>
+        <tr>
+            <td>Sách Liên hoàn lv2</td>
+            <td>nâng liên hoàn chiêu lên cấp 2</td>
+            <td>3778</td>
+        </tr>
+        <tr>
+            <td>Sách Liên hoàn lv3</td>
+            <td>nâng liên hoàn chiêu lên cấp 3</td>
+            <td>3778</td>
+        </tr>
+        <tr>
+            <td>Sách Liên hoàn lv4</td>
+            <td>nâng liên hoàn chiêu lên cấp 4</td>
+            <td>3778</td>
+        </tr>
+        <tr>
+            <td>Sách Liên hoàn lv5</td>
+            <td>nâng liên hoàn chiêu lên cấp 5</td>
+            <td>3778</td>
+        </tr>
+        <tr>
+            <td>Sách Liên hoàn lv6</td>
+            <td>nâng liên hoàn chiêu lên cấp 6</td>
+            <td>3778</td>
+        </tr>
+        <tr>
+            <td>Sách Liên hoàn lv7</td>
+            <td>nâng liên hoàn chiêu lên cấp 7</td>
+            <td>3778</td>
+        </tr>
+        <tr>
+            <td>Sách Masenko lv1</td>
+            <td>học kĩ năng Masenko</td>
+            <td>672</td>
+        </tr>
+        <tr>
+            <td>Sách Masenko lv2</td>
+            <td>nâng đòn Masenko lên cấp 2</td>
+            <td>673</td>
+        </tr>
+        <tr>
+            <td>Sách Masenko lv3</td>
+            <td>nâng đòn Masenko lên cấp 3</td>
+            <td>674</td>
+        </tr>
+        <tr>
+            <td>Sách Masenko lv4</td>
+            <td>nâng đòn Masenko lên cấp 4</td>
+            <td>675</td>
+        </tr>
+        <tr>
+            <td>Sách Masenko lv5</td>
+            <td>nâng đòn Masenko lên cấp 5</td>
+            <td>676</td>
+        </tr>
+        <tr>
+            <td>Sách Masenko lv6</td>
+            <td>nâng đòn Masenko lên cấp 6</td>
+            <td>677</td>
+        </tr>
+        <tr>
+            <td>Sách Masenko lv7</td>
+            <td>nâng đòn Masenko lên cấp 7</td>
+            <td>678</td>
+        </tr>
+        <tr>
+            <td>Sách Thôi Miên lv1</td>
+            <td>học phép Thôi Miên</td>
+            <td>3782</td>
+        </tr>
+        <tr>
+            <td>Sách Thôi Miên lv2</td>
+            <td>nâng phép thôi miên lên cấp 2</td>
+            <td>3782</td>
+        </tr>
+        <tr>
+            <td>Sách Thôi Miên lv3</td>
+            <td>nâng phép thôi miên lên cấp 3</td>
+            <td>3782</td>
+        </tr>
+        <tr>
+            <td>Sách Thôi Miên lv4</td>
+            <td>nâng phép thôi miên lên cấp 4</td>
+            <td>3782</td>
+        </tr>
+        <tr>
+            <td>Sách Thôi Miên lv5</td>
+            <td>nâng phép thôi miên lên cấp 5</td>
+            <td>3782</td>
+        </tr>
+        <tr>
+            <td>Sách Thôi Miên lv6</td>
+            <td>nâng phép thôi miên lên cấp 6</td>
+            <td>3782</td>
+        </tr>
+        <tr>
+            <td>Sách Thôi Miên lv7</td>
+            <td>nâng phép thôi miên lên cấp 7</td>
+            <td>3782</td>
+        </tr>
+        <tr>
+            <td>Sách Trói lv1</td>
+            <td>học phép trói</td>
+            <td>3779</td>
+        </tr>
+        <tr>
+            <td>Sách Trói lv2</td>
+            <td>nâng phép trói lên cấp 2</td>
+            <td>3779</td>
+        </tr>
+        <tr>
+            <td>Sách Trói lv3</td>
+            <td>nâng phép trói lên cấp 3</td>
+            <td>3779</td>
+        </tr>
+        <tr>
+            <td>Sách Trói lv4</td>
+            <td>nâng phép trói lên cấp 4</td>
+            <td>3779</td>
+        </tr>
+        <tr>
+            <td>Sách Trói lv5</td>
+            <td>nâng phép trói lên cấp 5</td>
+            <td>3779</td>
+        </tr>
+        <tr>
+            <td>Sách Trói lv6</td>
+            <td>nâng phép trói lên cấp 6</td>
+            <td>3779</td>
+        </tr>
+        <tr>
+            <td>Sách Trói lv7</td>
+            <td>nâng phép trói lên cấp 7</td>
+            <td>3779</td>
+        </tr>
+        <tr>
+            <td>Samurai Đỏ </td>
+            <td>Linh Thú Samurai đỏ</td>
+            <td>15239</td>
+        </tr>
+        <tr>
+            <td>Samurai Lam</td>
+            <td>Linh Thú</td>
+            <td>15253</td>
+        </tr>
+        <tr>
+            <td>Samurai Tím</td>
+            <td>Linh Thú</td>
+            <td>15251</td>
+        </tr>
+        <tr>
+            <td>Sao biển</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6572</td>
+        </tr>
+        <tr>
+            <td>Sao la</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9372</td>
+        </tr>
+        <tr>
+            <td>Sao pha lê</td>
+            <td>Ép vào đồ sao pha lê để tăng chỉ số</td>
+            <td>9176</td>
+        </tr>
+        <tr>
+            <td>Sao pha lê</td>
+            <td>Ép vào đồ sao pha lê để tăng chỉ số</td>
+            <td>9175</td>
+        </tr>
+        <tr>
+            <td>Sao pha lê</td>
+            <td>Ép vào đồ sao pha lê để tăng chỉ số</td>
+            <td>3893</td>
+        </tr>
+        <tr>
+            <td>Sao pha lê</td>
+            <td>Ép vào đồ sao pha lê để tăng chỉ số</td>
+            <td>3892</td>
+        </tr>
+        <tr>
+            <td>Sao pha lê</td>
+            <td>Ép vào đồ sao pha lê để tăng chỉ số</td>
+            <td>3891</td>
+        </tr>
+        <tr>
+            <td>Sao pha lê</td>
+            <td>Ép vào đồ sao pha lê để tăng chỉ số</td>
+            <td>3890</td>
+        </tr>
+        <tr>
+            <td>Sao pha lê</td>
+            <td>Ép vào đồ sao pha lê để tăng chỉ số</td>
+            <td>3889</td>
+        </tr>
+        <tr>
+            <td>Sao pha lê</td>
+            <td>Ép vào đồ sao pha lê để tăng chỉ số</td>
+            <td>3888</td>
+        </tr>
+        <tr>
+            <td>Sao pha lê</td>
+            <td>Ép vào đồ sao pha lê để tăng chỉ số</td>
+            <td>3887</td>
+        </tr>
+        <tr>
+            <td>Sao pha lê</td>
+            <td>Ép vào đồ sao pha lê để tăng chỉ số </td>
+            <td>15035</td>
+        </tr>
+        <tr>
+            <td>Sao pha lê</td>
+            <td>Ép vào đồ sao pha lê để tăng chỉ số </td>
+            <td>15034</td>
+        </tr>
+        <tr>
+            <td>Sao pha lê</td>
+            <td>Ép vào đồ sao pha lê để tăng chỉ số </td>
+            <td>15033</td>
+        </tr>
+        <tr>
+            <td>Siêu Pháo bông x100</td>
+            <td>Vật phẩm sự kiện năm mới</td>
+            <td>4548</td>
+        </tr>
+        <tr>
+            <td>Siêu thánh thủy</td>
+            <td>Tẩy toàn bộ tiềm năng</td>
+            <td>1088</td>
+        </tr>
+        <tr>
+            <td>Siêu thần thủy</td>
+            <td>Sử dụng sẽ có cơ hội tăng 5 triệu Sức Mạnh và Tiềm Năng vĩnh viễn.</td>
+            <td>6850</td>
+        </tr>
+        <tr>
+            <td>Siêu thần thủy</td>
+            <td>Sử dụng sẽ có cơ hội tăng 1 triệu Sức Mạnh và Tiềm Năng vĩnh viễn.</td>
+            <td>6849</td>
+        </tr>
+        <tr>
+            <td>Siêu thần thủy</td>
+            <td>Vật phẩm nhiệm vụ</td>
+            <td>6848</td>
+        </tr>
+        <tr>
+            <td>Số 1 Mabư</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9389</td>
+        </tr>
+        <tr>
+            <td>Số 10 Pôcôlô</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9207</td>
+        </tr>
+        <tr>
+            <td>Số 11 Gohan</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9387</td>
+        </tr>
+        <tr>
+            <td>Số 2 Krilin</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9208</td>
+        </tr>
+        <tr>
+            <td>Số 3 Poc</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9393</td>
+        </tr>
+        <tr>
+            <td>Số 4 Thên Xin Hăng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9326</td>
+        </tr>
+        <tr>
+            <td>Số 5 Pic</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9358</td>
+        </tr>
+        <tr>
+            <td>Số 6 Cađíc</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9385</td>
+        </tr>
+        <tr>
+            <td>Số 7 Goku</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9383</td>
+        </tr>
+        <tr>
+            <td>Số 8 Biden</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9390</td>
+        </tr>
+        <tr>
+            <td>Số 9 Quy lão Kamê</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9395</td>
+        </tr>
+        <tr>
+            <td>Sôcôla</td>
+            <td></td>
+            <td>4133</td>
+        </tr>
+        <tr>
+            <td>Súp bí hắc ám</td>
+            <td>Vật phẩm sự kiện. Ăn vào +10% HP trong vòng 30 phút.</td>
+            <td>8244</td>
+        </tr>
+        <tr>
+            <td>Super Broly Huyền Thoại</td>
+            <td>Cải trang thành Super Broly Huyền Thoại</td>
+            <td>11924</td>
+        </tr>
+        <tr>
+            <td>Super Zamasu White</td>
+            <td>Cải trang thành Super Zamasu White</td>
+            <td>15172</td>
+        </tr>
+        <tr>
+            <td>Super Zamasu White</td>
+            <td>Cải trang thành Super Zamasu White</td>
+            <td>11841</td>
+        </tr>
+        <tr>
+            <td>Sushi</td>
+            <td>Thu thập đủ 99 đến gặp Bill tại hành tinh Kaio</td>
+            <td>6328</td>
+        </tr>
+        <tr>
+            <td>Sức đánh +20K</td>
+            <td></td>
+            <td>2754</td>
+        </tr>
+        <tr>
+            <td>Sylveon</td>
+            <td>Pokemon</td>
+            <td>14017</td>
+        </tr>
+        <tr>
+            <td>Tái tạo năng lượng lv1</td>
+            <td>học Tái tạo năng lượng</td>
+            <td>1097</td>
+        </tr>
+        <tr>
+            <td>Tái tạo năng lượng lv2</td>
+            <td>nâng Tái tạo năng lượng lên cấp 2</td>
+            <td>1098</td>
+        </tr>
+        <tr>
+            <td>Tái tạo năng lượng lv3</td>
+            <td>nâng Tái tạo năng lượng lên cấp 3</td>
+            <td>1099</td>
+        </tr>
+        <tr>
+            <td>Tái tạo năng lượng lv4</td>
+            <td>nâng Tái tạo năng lượng lên cấp 4</td>
+            <td>1100</td>
+        </tr>
+        <tr>
+            <td>Tái tạo năng lượng lv5</td>
+            <td>nâng Tái tạo năng lượng lên cấp 5</td>
+            <td>1101</td>
+        </tr>
+        <tr>
+            <td>Tái tạo năng lượng lv6</td>
+            <td>nâng Tái tạo năng lượng lên cấp 6</td>
+            <td>1102</td>
+        </tr>
+        <tr>
+            <td>Tái tạo năng lượng lv7</td>
+            <td>nâng Tái tạo năng lượng lên cấp 7</td>
+            <td>1103</td>
+        </tr>
+        <tr>
+            <td>Tàng Ảnh</td>
+            <td>Pet chiến cơ</td>
+            <td>15436</td>
+        </tr>
+        <tr>
+            <td>Tanjiro</td>
+            <td>Cải trang úp TNSM Phê vãi ò</td>
+            <td>10216</td>
+        </tr>
+        <tr>
+            <td>Tất</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6122</td>
+        </tr>
+        <tr>
+            <td>Thái Dương Hạ San lv1</td>
+            <td>học Thái Dương Hạ San</td>
+            <td>658</td>
+        </tr>
+        <tr>
+            <td>Thái Dương Hạ San lv2</td>
+            <td>nâng TDHS lên cấp 2</td>
+            <td>659</td>
+        </tr>
+        <tr>
+            <td>Thái Dương Hạ San lv3</td>
+            <td>nâng TDHS lên cấp 3</td>
+            <td>660</td>
+        </tr>
+        <tr>
+            <td>Thái Dương Hạ San lv4</td>
+            <td>nâng TDHS lên cấp 4</td>
+            <td>661</td>
+        </tr>
+        <tr>
+            <td>Thái Dương Hạ San lv5</td>
+            <td>nâng TDHS lên cấp 5</td>
+            <td>662</td>
+        </tr>
+        <tr>
+            <td>Thái Dương Hạ San lv6</td>
+            <td>nâng TDHS lên cấp 6</td>
+            <td>663</td>
+        </tr>
+        <tr>
+            <td>Thái Dương Hạ San lv7</td>
+            <td>nâng TDHS lên cấp 7</td>
+            <td>664</td>
+        </tr>
+        <tr>
+            <td>Tháo cờ</td>
+            <td>Tắt PK đồ sát</td>
+            <td>2761</td>
+        </tr>
+        <tr>
+            <td>Thằn Lằn</td>
+            <td>Linh Thú</td>
+            <td>15305</td>
+        </tr>
+        <tr>
+            <td>Thăng tinh thạch</td>
+            <td>Bảo thạch hiếm</td>
+            <td>15077</td>
+        </tr>
+        <tr>
+            <td>Thần chết cute</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8200</td>
+        </tr>
+        <tr>
+            <td>Thần Goku</td>
+            <td>Bởi Rin</td>
+            <td>3883</td>
+        </tr>
+        <tr>
+            <td>Thẻ đổi tên</td>
+            <td>Sử dụng để đổi tên cho bản thân</td>
+            <td>2989</td>
+        </tr>
+        <tr>
+            <td>Thiệp chúc tết</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>2988</td>
+        </tr>
+        <tr>
+            <td>Thịt heo</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7068</td>
+        </tr>
+        <tr>
+            <td>Thịt tươi</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7068</td>
+        </tr>
+        <tr>
+            <td>Thịt tươi</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7068</td>
+        </tr>
+        <tr>
+            <td>Thỏ đen Android 18</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9977</td>
+        </tr>
+        <tr>
+            <td>Thỏ đỏ Chi Chi</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9976</td>
+        </tr>
+        <tr>
+            <td>Thỏ hồng Bun ma</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9975</td>
+        </tr>
+        <tr>
+            <td>Thỏ trắng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8146</td>
+        </tr>
+        <tr>
+            <td>Thỏ xám</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8139</td>
+        </tr>
+        <tr>
+            <td>Thỏi vàng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4028</td>
+        </tr>
+        <tr>
+            <td>Thú cưỡi cực VIP</td>
+            <td>Dùng để bay phục hồi HP</td>
+            <td>15929</td>
+        </tr>
+        <tr>
+            <td>Thú cưỡi Tinh Lang Nha</td>
+            <td>Vật phẩm dùng để bay không tốn KI</td>
+            <td>15929</td>
+        </tr>
+        <tr>
+            <td>Thúng đậu xanh</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7070</td>
+        </tr>
+        <tr>
+            <td>Thúng nếp</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7069</td>
+        </tr>
+        <tr>
+            <td>Thuốc mỡ Ipana</td>
+            <td>Trong vòng tối đa 10 phút +10% sức đánh gốc và hồi phục HP,KI</td>
+            <td>9068</td>
+        </tr>
+        <tr>
+            <td>Thuốc mỡ Ipana đặc biệt</td>
+            <td>Trong vòng tối đa 30 phút +10% sức đánh gốc và hồi phục HP,KI</td>
+            <td>9068</td>
+        </tr>
+        <tr>
+            <td>Tinh Linh</td>
+            <td>Linh Thú</td>
+            <td>15329</td>
+        </tr>
+        <tr>
+            <td>Top 1 Mùa 2</td>
+            <td>Top 1</td>
+            <td>12141</td>
+        </tr>
+        <tr>
+            <td>Top 2 Mùa 2</td>
+            <td>Top 2</td>
+            <td>12142</td>
+        </tr>
+        <tr>
+            <td>Top 3 Mùa 2</td>
+            <td>Top 3</td>
+            <td>12143</td>
+        </tr>
+        <tr>
+            <td>Tôm tẩm bột chiên xù</td>
+            <td>Tặng cho Whis hoặc ăn vào để tăng 5% HP trong vòng 10 phút</td>
+            <td>8062</td>
+        </tr>
+        <tr>
+            <td>Trái bóng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9396</td>
+        </tr>
+        <tr>
+            <td>Trái dừa</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6574</td>
+        </tr>
+        <tr>
+            <td>Trùm Basil</td>
+            <td>Danh hiệu</td>
+            <td>15267</td>
+        </tr>
+        <tr>
+            <td>TRÙM HARUNA</td>
+            <td>Danh Hiệu</td>
+            <td>15261</td>
+        </tr>
+        <tr>
+            <td>Trùm Ookaza</td>
+            <td>Danh hiệu</td>
+            <td>15264</td>
+        </tr>
+        <tr>
+            <td>Truy</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>1409</td>
+        </tr>
+        <tr>
+            <td>Truyện tranh</td>
+            <td>Vật phẩm nhiệm vụ</td>
+            <td>1041</td>
+        </tr>
+        <tr>
+            <td>Trứng vịt muối</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8130</td>
+        </tr>
+        <tr>
+            <td>Tuần lộc nhí</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>8652</td>
+        </tr>
+        <tr>
+            <td>Túi Canh Tý 2020</td>
+            <td>Mở ra sẽ nhận 1 chuột phát tài</td>
+            <td>7097</td>
+        </tr>
+        <tr>
+            <td>Túi quà</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>7396</td>
+        </tr>
+        <tr>
+            <td>Tự động luyện tập</td>
+            <td>Tự động luyện tập</td>
+            <td>4387</td>
+        </tr>
+        <tr>
+            <td>Tử thần</td>
+            <td>Thú cưng</td>
+            <td>15062</td>
+        </tr>
+        <tr>
+            <td>Tử thần 2</td>
+            <td>Thú cưng</td>
+            <td>15064</td>
+        </tr>
+        <tr>
+            <td>Tyrantrum</td>
+            <td>Pokemon</td>
+            <td>14019</td>
+        </tr>
+        <tr>
+            <td>Urôn</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>1404</td>
+        </tr>
+        <tr>
+            <td>Ván bay</td>
+            <td>Bay không tốn KI</td>
+            <td>2275</td>
+        </tr>
+        <tr>
+            <td>Ván bay VIP</td>
+            <td>Bay phục hồi KI</td>
+            <td>2276</td>
+        </tr>
+        <tr>
+            <td>Ván lướt sóng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9594</td>
+        </tr>
+        <tr>
+            <td>Vàng</td>
+            <td></td>
+            <td>930</td>
+        </tr>
+        <tr>
+            <td>Vàng</td>
+            <td></td>
+            <td>929</td>
+        </tr>
+        <tr>
+            <td>Vàng</td>
+            <td></td>
+            <td>928</td>
+        </tr>
+        <tr>
+            <td>Vàng</td>
+            <td></td>
+            <td>927</td>
+        </tr>
+        <tr>
+            <td>Vé Hồng ngọc</td>
+            <td>Sử dụng được 10.000 Hồng ngọc và 10.000 Ngọc Xanh</td>
+            <td>11177</td>
+        </tr>
+        <tr>
+            <td>Vé quay ngọc đen</td>
+            <td>Dùng để đập ngọc may mắn miễn phí ở Thượng Đế</td>
+            <td>7389</td>
+        </tr>
+        <tr>
+            <td>Vé quay ngọc vàng</td>
+            <td>Dùng để đập ngọc may mắn miễn phí ở Thượng Đế</td>
+            <td>7390</td>
+        </tr>
+        <tr>
+            <td>Ve sầu Sên</td>
+            <td>Vật phẩm dùng để bay không tốn KI</td>
+            <td>12449</td>
+        </tr>
+        <tr>
+            <td>Ve sầu Sên Tiến hóa</td>
+            <td>Vật phẩm dùng để bay không tốn KI</td>
+            <td>12450</td>
+        </tr>
+        <tr>
+            <td>Vé tặng ngọc</td>
+            <td>Dùng để tặng ngọc của mình cho người khác</td>
+            <td>6765</td>
+        </tr>
+        <tr>
+            <td>Vệ tinh phòng thủ</td>
+            <td>Hỗ trợ chiến đấu cho cá nhân và bang hội trong 30 phút trong phạm vi quỹ đạo của Vệ Tinh</td>
+            <td>2267</td>
+        </tr>
+        <tr>
+            <td>Vệ tinh sinh lực</td>
+            <td>Hỗ trợ chiến đấu cho cá nhân và bang hội trong 30 phút trong phạm vi quỹ đạo của Vệ Tinh</td>
+            <td>2264</td>
+        </tr>
+        <tr>
+            <td>Vệ tinh trí lực</td>
+            <td>Hỗ trợ chiến đấu cho cá nhân và bang hội trong 30 phút trong phạm vi quỹ đạo của Vệ Tinh</td>
+            <td>2265</td>
+        </tr>
+        <tr>
+            <td>Vệ tinh trí tuệ</td>
+            <td>Hỗ trợ chiến đấu cho cá nhân và bang hội trong 30 phút trong phạm vi quỹ đạo của Vệ Tinh</td>
+            <td>2266</td>
+        </tr>
+        <tr>
+            <td>Viên Capsule kì bí</td>
+            <td>Bên trong ẩn chứa nhiều thứ bí ẩn</td>
+            <td>2759</td>
+        </tr>
+        <tr>
+            <td>Vinh Dự Samurai</td>
+            <td>Dùng để nâng cấp sức mạnh ngọc bội</td>
+            <td>15419</td>
+        </tr>
+        <tr>
+            <td>Vỏ ốc</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9602</td>
+        </tr>
+        <tr>
+            <td>Vỏ ốc</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6570</td>
+        </tr>
+        <tr>
+            <td>Vỏ sò</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>6573</td>
+        </tr>
+        <tr>
+            <td>Voi</td>
+            <td>Pet giỗ tổ</td>
+            <td>12315</td>
+        </tr>
+        <tr>
+            <td>Vòng Kim Cô</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>4546</td>
+        </tr>
+        <tr>
+            <td>Vương</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>1405</td>
+        </tr>
+        <tr>
+            <td>Xe tuần lộc</td>
+            <td>Bay không tốn KI</td>
+            <td>7067</td>
+        </tr>
+        <tr>
+            <td>Xiên cá</td>
+            <td>Giúp tăng chỉ số bản thân</td>
+            <td>9627</td>
+        </tr>
+        <tr>
+            <td>Xô cá vàng</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9599</td>
+        </tr>
+        <tr>
+            <td>Xô cá xanh</td>
+            <td>Vật phẩm sự kiện</td>
+            <td>9598</td>
+        </tr>
+        <tr>
+            <td>Xúc xích</td>
+            <td>Thu thập đủ 99 đến gặp Bill tại hành tinh Kaio</td>
+            <td>6325</td>
+        </tr>
+        <tr>
+            <td>Zenitsu</td>
+            <td>Cải trang sự kiện</td>
+            <td>10278</td>
+        </tr>
+    </table>
+</body>
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const itemTable = document.getElementById('itemTable');
+
+    searchInput.addEventListener('keyup', function () {
+        const filter = searchInput.value.toLowerCase();
+        const rows = itemTable.getElementsByTagName('tr');
+
+        for (let i = 1; i < rows.length; i++) {
+            const cells = rows[i].getElementsByTagName('td');
+            let rowContainsText = false;
+
+            for (let j = 0; j < cells.length; j++) {
+                if (cells[j].textContent.toLowerCase().includes(filter)) {
+                    rowContainsText = true;
+                    break;
+                }
+            }
+
+            rows[i].style.display = rowContainsText ? '' : 'none';
+        }
+    });
+</script>
+
+</html>
